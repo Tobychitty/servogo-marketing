@@ -90,9 +90,9 @@ const COMPANY_EMAIL = 'support@servogo.co.uk';
           <ul>
             <li><strong>Stripe, Inc.</strong> - Payment processing. Stripe acts as an independent data controller for card data.</li>
             <li><strong>Resend</strong> - Transactional email delivery.</li>
+            <li><strong>PostHog (EU)</strong> - Product analytics and session recording. PostHog records page views, feature interactions, and anonymised session replays to help us improve the product. All data is processed on EU servers. Inputs are masked in recordings; no sensitive form data is captured.</li>
             <li><strong>OpenWeatherMap</strong> - Weather data for route planning (no personal data shared).</li>
             <li><strong>Hosting provider</strong> - Cloud infrastructure, database hosting, and automated backups.</li>
-            <li><strong>Sentry</strong> - Error monitoring (IP addresses and stack traces; configured to minimise PII).</li>
           </ul>
           <p>We do not sell your personal data. We do not share it with advertisers.</p>
           <p>We may disclose personal data if required by law, court order, or to protect the rights, property, or safety of {COMPANY_NAME}, our users, or others.</p>
@@ -121,13 +121,16 @@ const COMPANY_EMAIL = 'support@servogo.co.uk';
           <p>You have the right to lodge a complaint with the Information Commissioner's Office (ICO): <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.</p>
 
           <h2>8. Cookies and Local Storage</h2>
-          <p>{COMPANY_NAME} does not use advertising or analytics cookies. We use browser localStorage to store:</p>
+          <p>We do not use advertising cookies. The storage we use falls into two categories:</p>
+          <p><strong>Essential (no consent required under PECR Reg. 6(4)):</strong></p>
           <ul>
-            <li>Authentication tokens - necessary for you to remain logged in.</li>
-            <li>UI preferences such as table column visibility and sidebar state.</li>
+            <li>Authentication tokens in localStorage - necessary to keep you logged in.</li>
+            <li>UI preferences (table column visibility, sidebar state) in localStorage.</li>
           </ul>
-          <p>These are essential for the Service to function. No consent is required for strictly necessary storage under PECR Regulation 6(4).</p>
-          <p>We do not use third-party analytics or advertising cookies.</p>
+          <p><strong>Analytics (PostHog):</strong></p>
+          <ul>
+            <li>PostHog sets cookies and uses localStorage to track page views, feature interactions, and session recordings across your use of the Service. This data is used solely to improve the product. You can opt out by contacting us at {COMPANY_EMAIL}.</li>
+          </ul>
 
           <h2>9. Security</h2>
           <p>We implement appropriate technical and organisational measures to protect personal data, including:</p>
