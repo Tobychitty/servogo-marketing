@@ -1,0 +1,165 @@
+---
+import Base from '../layouts/Base.astro';
+
+const LAST_UPDATED = '25 April 2026';
+const COMPANY_NAME = 'Servogo';
+const COMPANY_LEGAL = 'Tobsoft Ltd';
+const COMPANY_NUMBER = '17180232';
+const COMPANY_EMAIL = 'support@servogo.co.uk';
+---
+
+<Base
+  title="Privacy Policy | Servogo"
+  description="Privacy Policy for Servogo, explaining how Tobsoft Ltd collects, uses, and protects your personal data under UK GDPR."
+>
+
+<div class="legal-shell">
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 720px; margin: 0 auto;">
+        <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom: 32px;">
+          <a href="/">Home</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <span>Privacy Policy</span>
+        </nav>
+
+        <h1 style="font-size: clamp(28px, 4vw, 44px); font-weight: 600; letter-spacing: -0.025em; margin: 0 0 8px; color: var(--ink);">Privacy Policy</h1>
+        <p style="font-size: 14px; color: var(--text-tertiary); margin: 0 0 48px;">Last updated: {LAST_UPDATED}</p>
+
+        <div class="prose legal-prose">
+          <p class="legal-intro">
+            This Privacy Policy explains how {COMPANY_LEGAL} (trading as {COMPANY_NAME}) ("we",
+            "us", "our") collects, uses, and protects personal data when you use the {COMPANY_NAME}
+            platform ("Service"). We are committed to handling personal data in accordance with
+            the UK GDPR and the Data Protection Act 2018.
+          </p>
+
+          <h2>1. Who We Are</h2>
+          <p>{COMPANY_LEGAL} (trading as {COMPANY_NAME}) is the data controller for the
+          personal data of account holders, billing contacts, and administrators. For personal
+          data entered by customers about their own clients and employees, the customer is the
+          data controller and we act as data processor.</p>
+          <p>Registered in England and Wales. Company number: {COMPANY_NUMBER}.</p>
+          <p>Contact: <a href={`mailto:${COMPANY_EMAIL}`}>{COMPANY_EMAIL}</a></p>
+
+          <h2>2. Data We Collect</h2>
+          <h3>2.1 Account and billing data</h3>
+          <ul>
+            <li><strong>Identity:</strong> First name, last name, username, email address.</li>
+            <li><strong>Organisation:</strong> Business name, timezone, branding, address, VAT number, company number.</li>
+            <li><strong>Billing:</strong> Subscription plan, Stripe customer and subscription IDs. We do not store full card numbers - these are handled by Stripe.</li>
+          </ul>
+          <h3>2.2 Service usage data</h3>
+          <ul>
+            <li>Jobs, routes, service plans, and invoices you create in the Service.</li>
+            <li>Audit log entries recording key actions (login, billing events, role changes).</li>
+            <li>Messages sent between staff and clients within the platform.</li>
+          </ul>
+          <h3>2.3 Technical data</h3>
+          <ul>
+            <li>IP address, browser type, and device type (collected in server logs).</li>
+            <li>Authentication tokens stored in your browser's localStorage.</li>
+            <li>Request IDs and performance metrics for diagnostics.</li>
+          </ul>
+          <h3>2.4 Data you enter about others</h3>
+          <p>You may enter personal data about your own clients and employees (names, addresses,
+          phone numbers, email addresses). You are the data controller for this data; we process
+          it solely to provide the Service to you.</p>
+
+          <h2>3. Legal Basis for Processing</h2>
+          <p>We process personal data on the following legal bases under UK GDPR Article 6:</p>
+          <ul>
+            <li><strong>Contract (Art. 6(1)(b)):</strong> Processing necessary to provide the Service under your subscription agreement - account management, billing, sending you service emails.</li>
+            <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> Security monitoring, fraud prevention, service improvement, and aggregated analytics. We have balanced these interests against your rights.</li>
+            <li><strong>Legal obligation (Art. 6(1)(c)):</strong> Retaining billing records as required by UK tax law.</li>
+            <li><strong>Consent (Art. 6(1)(a)):</strong> Marketing communications (where opted in). You may withdraw consent at any time.</li>
+          </ul>
+
+          <h2>4. How We Use Your Data</h2>
+          <ul>
+            <li>Providing, operating, and improving the Service.</li>
+            <li>Processing subscription payments and sending billing receipts.</li>
+            <li>Sending transactional emails: invitation links, password resets, invoice PDFs, job reminders, and weekly recaps.</li>
+            <li>Detecting and preventing fraud, abuse, and security incidents.</li>
+            <li>Complying with our legal obligations (e.g. VAT record-keeping).</li>
+            <li>Responding to your support requests and enquiries.</li>
+          </ul>
+
+          <h2>5. Data Sharing</h2>
+          <p>We share personal data only with trusted sub-processors required to deliver the Service:</p>
+          <ul>
+            <li><strong>Stripe, Inc.</strong> - Payment processing. Stripe acts as an independent data controller for card data.</li>
+            <li><strong>Resend</strong> - Transactional email delivery.</li>
+            <li><strong>OpenWeatherMap</strong> - Weather data for route planning (no personal data shared).</li>
+            <li><strong>Hosting provider</strong> - Cloud infrastructure, database hosting, and automated backups.</li>
+            <li><strong>Sentry</strong> - Error monitoring (IP addresses and stack traces; configured to minimise PII).</li>
+          </ul>
+          <p>We do not sell your personal data. We do not share it with advertisers.</p>
+          <p>We may disclose personal data if required by law, court order, or to protect the rights, property, or safety of {COMPANY_NAME}, our users, or others.</p>
+
+          <h2>6. Data Retention</h2>
+          <ul>
+            <li><strong>Active accounts:</strong> Data is retained for the duration of your subscription and for 30 days after account closure to allow data export.</li>
+            <li><strong>Soft-deleted records:</strong> Records you delete within the Service are soft-deleted and purged after 180 days.</li>
+            <li><strong>Closed organisations:</strong> All organisational data is hard-deleted 30 days after the subscription end date.</li>
+            <li><strong>Billing records:</strong> Payment records are retained for 7 years to comply with UK tax law.</li>
+            <li><strong>Server logs:</strong> Rotated after 90 days.</li>
+          </ul>
+
+          <h2>7. Your Rights Under UK GDPR</h2>
+          <p>You have the following rights regarding your personal data:</p>
+          <ul>
+            <li><strong>Access (Art. 15):</strong> Request a copy of your personal data by contacting us.</li>
+            <li><strong>Rectification (Art. 16):</strong> Correct inaccurate data through your account settings or by contacting us.</li>
+            <li><strong>Erasure (Art. 17):</strong> Request deletion of your personal data. Closing your account triggers our automated erasure process. Some data may be retained where we have a legal obligation to do so.</li>
+            <li><strong>Restriction (Art. 18):</strong> Request that we restrict processing of your data in certain circumstances.</li>
+            <li><strong>Portability (Art. 20):</strong> Receive your data in a machine-readable format.</li>
+            <li><strong>Object (Art. 21):</strong> Object to processing based on legitimate interests.</li>
+            <li><strong>Withdraw consent:</strong> Where processing is based on consent, you may withdraw it at any time without affecting the lawfulness of prior processing.</li>
+          </ul>
+          <p>To exercise your rights, contact us at <a href={`mailto:${COMPANY_EMAIL}`}>{COMPANY_EMAIL}</a>. We will respond within one month.</p>
+          <p>You have the right to lodge a complaint with the Information Commissioner's Office (ICO): <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.</p>
+
+          <h2>8. Cookies and Local Storage</h2>
+          <p>{COMPANY_NAME} does not use advertising or analytics cookies. We use browser localStorage to store:</p>
+          <ul>
+            <li>Authentication tokens - necessary for you to remain logged in.</li>
+            <li>UI preferences such as table column visibility and sidebar state.</li>
+          </ul>
+          <p>These are essential for the Service to function. No consent is required for strictly necessary storage under PECR Regulation 6(4).</p>
+          <p>We do not use third-party analytics or advertising cookies.</p>
+
+          <h2>9. Security</h2>
+          <p>We implement appropriate technical and organisational measures to protect personal data, including:</p>
+          <ul>
+            <li>TLS encryption in transit; encrypted disk storage at rest.</li>
+            <li>Short-lived JWTs (30-minute access tokens) with rotation on refresh.</li>
+            <li>Role-based access control limiting data access to authorised users.</li>
+            <li>Rate limiting on authentication endpoints to prevent brute-force attacks.</li>
+            <li>Regular automated database backups with a 14-day local retention.</li>
+          </ul>
+          <p>No method of transmission over the internet is 100% secure. If you believe your data has been compromised, contact us at {COMPANY_EMAIL} immediately.</p>
+
+          <h2>10. International Transfers</h2>
+          <p>Our primary infrastructure is hosted within the UK/EEA. Where sub-processors (such as Stripe or Resend) process data outside the UK, we rely on UK adequacy regulations or standard contractual clauses to ensure adequate protection.</p>
+
+          <h2>11. Children</h2>
+          <p>The Service is not directed at, and we do not knowingly collect personal data from, anyone under 18 years of age. If you believe we have inadvertently collected such data, please contact us so we can delete it.</p>
+
+          <h2>12. Changes to this Policy</h2>
+          <p>We may update this Privacy Policy from time to time. We will notify you of material changes by email or by a prominent notice in the Service at least 14 days before they take effect. The "last updated" date at the top of this page reflects the most recent revision.</p>
+
+          <h2>13. Contact Us</h2>
+          <p>For privacy-related questions, data subject requests, or to report a concern:</p>
+          <p><a href={`mailto:${COMPANY_EMAIL}`}>{COMPANY_EMAIL}</a></p>
+        </div>
+
+        <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--stroke-regular); display: flex; gap: 16px;">
+          <a href="/terms" class="btn btn-secondary">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</Base>

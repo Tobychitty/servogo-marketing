@@ -1,0 +1,187 @@
+---
+import Base from '../layouts/Base.astro';
+
+const LAST_UPDATED = '25 April 2026';
+const COMPANY_NAME = 'Servogo';
+const COMPANY_LEGAL = 'Tobsoft Ltd';
+const COMPANY_NUMBER = '17180232';
+const COMPANY_EMAIL = 'support@servogo.co.uk';
+---
+
+<Base
+  title="Terms of Service | Servogo"
+  description="Terms of Service for Servogo, the field service management platform operated by Tobsoft Ltd."
+>
+
+<div class="legal-shell">
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 720px; margin: 0 auto;">
+        <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom: 32px;">
+          <a href="/">Home</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <span>Terms of Service</span>
+        </nav>
+
+        <h1 style="font-size: clamp(28px, 4vw, 44px); font-weight: 600; letter-spacing: -0.025em; margin: 0 0 8px; color: var(--ink);">Terms of Service</h1>
+        <p style="font-size: 14px; color: var(--text-tertiary); margin: 0 0 48px;">Last updated: {LAST_UPDATED}</p>
+
+        <div class="prose legal-prose">
+          <p class="legal-intro">
+            These Terms of Service ("Terms") govern your access to and use of the {COMPANY_NAME} platform
+            ("Service") operated by {COMPANY_LEGAL} (trading as {COMPANY_NAME}) ("we", "us", "our").
+            By creating an account or using the Service you agree to these Terms. If you are agreeing
+            on behalf of a business you represent that you have authority to bind that business.
+          </p>
+
+          <h2>1. The Service</h2>
+          <p>{COMPANY_NAME} is a field service management platform that helps businesses schedule
+          technicians, manage client routes, generate invoices, and track service visits. We
+          grant you a limited, non-exclusive, non-transferable licence to access and use the
+          Service for your internal business operations during your subscription period.</p>
+
+          <h2>2. Accounts</h2>
+          <h3>2.1 Eligibility</h3>
+          <p>You must be at least 18 years old and have the legal capacity to enter into a
+          binding contract. The Service is intended for businesses, not individual consumers.</p>
+          <h3>2.2 Account security</h3>
+          <p>You are responsible for keeping your login credentials confidential and for all
+          activity that occurs under your account. Notify us immediately at {COMPANY_EMAIL} if
+          you suspect unauthorised access.</p>
+          <h3>2.3 Accurate information</h3>
+          <p>You must provide accurate, current, and complete information when creating your
+          account and keep it up to date.</p>
+
+          <h2>3. Subscriptions and Billing</h2>
+          <h3>3.1 Plans and fees</h3>
+          <p>Subscriptions are billed in advance on a monthly or annual basis. Current pricing
+          is displayed on our <a href="/pricing">pricing page</a> and may change with 30 days' notice.</p>
+          <h3>3.2 Payment</h3>
+          <p>Payments are processed by Stripe, Inc. By providing payment details you authorise
+          us to charge the applicable fees. All fees are exclusive of VAT unless stated
+          otherwise; applicable VAT will be added at checkout.</p>
+          <h3>3.3 Seat-based billing</h3>
+          <p>Team and Pro plans are priced per active team member. Adding members to your
+          organisation will adjust your subscription quantity at the next billing cycle.</p>
+          <h3>3.4 Free trial</h3>
+          <p>Where we offer a free trial period, no charge is made until the trial ends. You
+          may cancel before the trial ends to avoid being charged.</p>
+          <h3>3.5 Refunds</h3>
+          <p>We offer a 30-day money-back guarantee on your first subscription payment. After
+          that, fees are non-refundable except where required by law. If we materially reduce
+          the functionality of the Service we will offer a pro-rata refund for the unused
+          period.</p>
+          <h3>3.6 Failed payments</h3>
+          <p>If a payment fails your account will enter a grace period. Continued failure will
+          result in your account being restricted to read-only access until payment is resolved.</p>
+
+          <h2>4. Acceptable Use</h2>
+          <p>You may not use the Service to:</p>
+          <ul>
+            <li>Violate any applicable law or regulation.</li>
+            <li>Upload, store, or transmit unlawful, harmful, or fraudulent content.</li>
+            <li>Attempt to gain unauthorised access to any part of the Service or its infrastructure.</li>
+            <li>Reverse-engineer, decompile, or otherwise attempt to extract the source code of the Service.</li>
+            <li>Resell or sub-licence access to the Service without our written consent.</li>
+            <li>Use the Service in a way that places unreasonable load on our infrastructure.</li>
+          </ul>
+          <p>We reserve the right to suspend or terminate access for any violation of this section.</p>
+
+          <h2>5. Your Data</h2>
+          <h3>5.1 Ownership</h3>
+          <p>You retain all rights to the data you upload or create in the Service ("Customer
+          Data"). We do not claim ownership of your Customer Data.</p>
+          <h3>5.2 Licence to us</h3>
+          <p>You grant us a limited licence to store, process, and transmit Customer Data solely
+          as necessary to provide and improve the Service.</p>
+          <h3>5.3 Data processing</h3>
+          <p>Where we process personal data on your behalf (e.g. employee or client records) we
+          act as a data processor and you act as the data controller. Our Privacy Policy and
+          the data processing terms incorporated therein apply. You are responsible for having a
+          lawful basis to input personal data into the Service and for obtaining any necessary
+          consents from your clients and staff.</p>
+          <h3>5.4 Data export</h3>
+          <p>You may export your Customer Data at any time via the Service's export features or
+          the API. On termination of your account we will make your data available for export
+          for 30 days, after which it may be deleted in accordance with our retention policy.</p>
+
+          <h2>6. Intellectual Property</h2>
+          <p>The Service, including its software, design, and content (excluding Customer Data),
+          is owned by {COMPANY_NAME} and protected by copyright, trademark, and other
+          intellectual property laws. These Terms do not grant you any rights in the Service
+          other than the limited licence described in Section 1.</p>
+
+          <h2>7. Confidentiality</h2>
+          <p>Each party agrees to keep the other's non-public information confidential and not
+          to disclose it to third parties without consent, except as required by law or to
+          deliver the Service. This obligation survives termination of these Terms for three
+          years.</p>
+
+          <h2>8. Warranties and Disclaimers</h2>
+          <p>We provide the Service on an "as is" and "as available" basis. To the fullest
+          extent permitted by law we disclaim all warranties, express or implied, including
+          merchantability, fitness for a particular purpose, and non-infringement. We do not
+          warrant that the Service will be error-free, uninterrupted, or meet your specific
+          requirements.</p>
+
+          <h2>9. Limitation of Liability</h2>
+          <p>To the fullest extent permitted by applicable law, {COMPANY_NAME}'s aggregate
+          liability to you for any claims arising out of or relating to these Terms or the
+          Service is limited to the fees you paid in the 12 months preceding the claim.</p>
+          <p>Neither party is liable for indirect, incidental, special, consequential, or
+          punitive damages, or loss of profits, revenue, data, or goodwill, even if advised
+          of the possibility of such damages.</p>
+          <p>Nothing in these Terms limits liability for fraud, death or personal injury caused
+          by negligence, or any liability that cannot be excluded by law.</p>
+
+          <h2>10. Indemnification</h2>
+          <p>You agree to indemnify and hold harmless {COMPANY_NAME} and its officers,
+          directors, employees, and agents from any claims, losses, or expenses (including
+          reasonable legal fees) arising from your use of the Service, your Customer Data, or
+          your violation of these Terms.</p>
+
+          <h2>11. Termination</h2>
+          <h3>11.1 By you</h3>
+          <p>You may cancel your subscription at any time through the billing portal. Cancellation
+          takes effect at the end of the current billing period. No partial-period refunds are
+          given unless covered by Section 3.5.</p>
+          <h3>11.2 By us</h3>
+          <p>We may suspend or terminate your account immediately if you breach these Terms, fail
+          to pay fees after a grace period, or if we are required to do so by law. We may also
+          discontinue the Service with 60 days' notice.</p>
+          <h3>11.3 Effect of termination</h3>
+          <p>On termination, your right to access the Service ceases. Sections 5, 6, 7, 9, 10,
+          13, and 14 survive termination.</p>
+
+          <h2>12. Changes to the Terms</h2>
+          <p>We may update these Terms from time to time. We will notify you of material changes
+          by email or by a prominent notice in the Service at least 14 days before they take
+          effect. Continued use of the Service after the effective date constitutes acceptance
+          of the updated Terms.</p>
+
+          <h2>13. Governing Law and Disputes</h2>
+          <p>These Terms are governed by the laws of England and Wales. Any disputes shall be
+          subject to the exclusive jurisdiction of the courts of England and Wales, except
+          where mandatory consumer protection law in your country provides otherwise.</p>
+
+          <h2>14. General</h2>
+          <p>These Terms, together with the Privacy Policy and any order forms, constitute the
+          entire agreement between you and {COMPANY_NAME} regarding the Service and supersede
+          all prior agreements. If any provision is found unenforceable it will be modified to
+          the minimum extent necessary; remaining provisions continue in full force. Our failure
+          to enforce any right is not a waiver of that right. You may not assign these Terms
+          without our written consent; we may assign them without restriction.</p>
+
+          <h2>15. Contact</h2>
+          <p>Questions about these Terms? Contact us at <a href={`mailto:${COMPANY_EMAIL}`}>{COMPANY_EMAIL}</a>.</p>
+        </div>
+
+        <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--stroke-regular); display: flex; gap: 16px;">
+          <a href="/privacy" class="btn btn-secondary">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</Base>
