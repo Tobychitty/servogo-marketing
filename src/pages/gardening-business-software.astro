@@ -1,0 +1,166 @@
+---
+import Base from '../layouts/Base.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: "How does Servogo handle different visit frequencies for different clients?",
+    a: "Each client has their own service plan with their own frequency. One client might be weekly lawn care, another fortnightly maintenance, another a monthly tidy. They all run independently on their own schedule, automatically booking the next visit when the last one closes.",
+  },
+  {
+    q: "Can I manage multiple gardeners on different jobs each day?",
+    a: "Yes. Each gardener has their own route, their own login, and sees only their own jobs in the tech app. You see all routes from the main account. Per-tech working days let you set which days each person is available, and the schedule respects it.",
+  },
+  {
+    q: "How does invoicing work for a gardening business?",
+    a: "Each completed visit generates a draft invoice. You can send one per visit, or roll multiple visits into a monthly invoice per client — useful for regular maintenance contracts. Invoices go by email with a Stripe payment link. Customers pay online, it marks itself paid.",
+  },
+  {
+    q: "Can clients accept a quote before I schedule the work?",
+    a: "Yes. Create a quote with line items, send it to the client by email, and they accept via a link. Once accepted, convert it into a scheduled job in one click. No re-entering anything.",
+  },
+  {
+    q: "Can I import my existing client list?",
+    a: "Yes. Bulk CSV import with auto field-mapping works for exports from most other tools. Drop in the file and Servogo maps the columns. Email us during the trial if you want a hand.",
+  },
+  {
+    q: "Does the tech app work without mobile signal?",
+    a: "The app loads and caches the day's route when it opens. Your gardeners can mark jobs complete, add notes, and take photos in areas without signal. Everything syncs when they're back on data.",
+  },
+];
+---
+
+<Base
+  title="Gardening Business Software | Servogo"
+  description="Software for gardening businesses. Manage recurring maintenance schedules, plan efficient routes, send invoices, and run your team. UK-based, free 14-day trial."
+  pageType="trade"
+  breadcrumbs={[{ name: 'Gardening business software', url: '/gardening-business-software' }]}
+>
+
+<section class="page-hero section-tight">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="section-eyebrow">Gardening</span>
+      <h1>Gardening business software for recurring maintenance schedules</h1>
+      <p>
+        Manage your regular clients, plan each day's route, invoice after every visit, and keep your team organised from one place.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary btn-lg">
+          Start free
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h8M8 3l4 4-4 4"/></svg>
+        </a>
+        <a href="/#pricing" class="btn btn-secondary btn-lg">See pricing</a>
+      </div>
+      <div class="hero-meta" style="justify-content: flex-start;">
+        <span><svg class="check" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7.5l3 3 7-7"/></svg> 14-day free trial</span>
+        <span class="sep"></span>
+        <span>No card required</span>
+        <span class="sep"></span>
+        <span>UK-based</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Recurring schedules</span>
+        <h2>Every regular client, on their own schedule.</h2>
+        <p class="lede">Set up a service plan for each client once. Servogo books the next visit automatically when the last one is marked complete. Your regular work takes care of itself.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Mixed frequencies in one schedule.</strong> Weekly lawn cuts, fortnightly maintenance, monthly tidies. Each client runs on their own timetable without any manual intervention.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Quick reschedule when things shift.</strong> Weather cancellation or a client holiday? Move the job from the day view in two clicks. The recurring plan resumes from the new date.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Full visit history per client.</strong> Every completed job is logged with date, notes, and photos. Useful when a client queries when you last visited or what work was done.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / schedule</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-schedule.png" alt="Servogo schedule view for gardening business" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep reverse">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Route planning</span>
+        <h2>Less driving, more gardening.</h2>
+        <p class="lede">Plot the day's jobs on a map. One click finds the shortest order between them. Drag a stop if you need to, and times update accordingly.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Separate routes per gardener.</strong> Each member of your team has their own day view with their own stops. You see all routes, they see only theirs.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Weather for the day.</strong> Hourly forecast alongside the stop list, so you know before you leave whether you're likely to be rained off.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>One-tap navigation.</strong> The tech app hands off to the device's maps app for turn-by-turn directions. Works on any phone, no extra setup.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / day-view</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-day-view.png" alt="Servogo route view for gardening rounds" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Gardening business software, answered.</h2>
+    </div>
+    <FAQ items={faqs} />
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" style="font-size: clamp(18px, 2vw, 22px); color: var(--text-muted); font-weight: 500; letter-spacing: 0;">
+        See how Servogo compares
+      </h2>
+    </div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="/vs-jobber" class="btn btn-secondary">Servogo vs Jobber</a>
+      <a href="/jobber-alternative-uk" class="btn btn-secondary">Looking for a Jobber alternative?</a>
+    </div>
+  </div>
+</section>
+
+</Base>

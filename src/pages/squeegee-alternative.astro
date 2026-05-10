@@ -1,0 +1,158 @@
+---
+import Base from '../layouts/Base.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: "How long does it take to move from Squeegee to Servogo?",
+    a: "Most people do it in an evening. Export your clients from Squeegee as CSV. Import into Servogo. Column names are recognised automatically, so there's nothing to remap. Your rounds, addresses, and frequencies land as they were. Email us during the trial if you want a hand.",
+  },
+  {
+    q: "What does Servogo have that Squeegee doesn't?",
+    a: "Stripe payment links on invoices, so clients can pay by card and the invoice marks itself paid. Drag-drop stop reordering with live arrival time recalculation. Quotes with client email acceptance. Payroll tracking per technician. Weather on the day view.",
+  },
+  {
+    q: "Will I lose my service history when I switch?",
+    a: "Your historical visit records from Squeegee don't transfer across automatically, but your client list, service plans, and frequencies all come across via CSV import. Going forward, Servogo builds a full visit history from every completed job.",
+  },
+  {
+    q: "Is there a free trial?",
+    a: "Yes. 14 days, no card required. You get the full Team plan during the trial. Import your Squeegee data, run the schedule for a week, and decide from there.",
+  },
+];
+---
+
+<Base
+  title="Squeegee Alternative | Servogo — UK Field Service Software"
+  description="Looking for a Squeegee alternative? Servogo is UK field service software for window cleaners and trades, with Stripe payments, payroll tracking, and a Squeegee CSV import that needs no remapping."
+  pageType="comparison"
+  breadcrumbs={[{ name: 'Squeegee alternative', url: '/squeegee-alternative' }]}
+>
+
+<section class="page-hero section-tight">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="section-eyebrow">Squeegee alternative</span>
+      <h1>A Squeegee alternative built for the same trades, with more where it matters</h1>
+      <p>
+        Servogo is field service software for UK window cleaners, gardeners, and other recurring-service trades.
+        It imports your Squeegee client list without any remapping, then adds card payments, payroll tracking, and quotes on top.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary btn-lg">
+          Start free trial
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h8M8 3l4 4-4 4"/></svg>
+        </a>
+        <a href="/vs-squeegee" class="btn btn-secondary btn-lg">Full comparison</a>
+      </div>
+      <div class="hero-meta" style="justify-content: flex-start;">
+        <span><svg class="check" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7.5l3 3 7-7"/></svg> Squeegee CSV import built in</span>
+        <span class="sep"></span>
+        <span>14-day free trial</span>
+        <span class="sep"></span>
+        <span>No card required</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Why switch</span>
+      <h2 class="section-title">What you get that Squeegee doesn't have.</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        </div>
+        <h3>Clients pay by card</h3>
+        <p>Every invoice gets a Stripe payment link. Your customer pays online, the invoice marks itself paid. No chasing, no reconciliation.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v6h6M9 14h6M9 17h4"/></svg>
+        </div>
+        <h3>Quotes with client sign-off</h3>
+        <p>Send a quote by email. The client accepts via a link. Convert into a scheduled job in one click. No double entry, no printing.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Payroll tracking for your team</h3>
+        <p>Set a flat rate or commission per visit for each technician. Servogo calculates earnings from completed jobs, by pay period, locked once paid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Migration</span>
+        <h2>Your Squeegee clients are in Servogo tonight.</h2>
+        <p class="lede">Export your Squeegee client list to CSV. Drop it into Servogo's import dialog. Squeegee's column names are recognised automatically. No remapping, no reformatting, no spreadsheet surgery.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Clients, addresses, and service plans land intact.</strong> Your rounds, frequencies, and prices come across exactly as they were in Squeegee.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Test it during the free trial.</strong> Import your data, run the schedule for a week, see how it fits. No commitment until you're ready.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Help available if you need it.</strong> Email us during the trial and we'll walk you through the import. Real people, not automated responses.</span>
+          </li>
+        </ul>
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary">Start free &mdash; import Squeegee data</a>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / schedule</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-schedule.png" alt="Servogo schedule after Squeegee migration" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Squeegee alternative, answered.</h2>
+    </div>
+    <FAQ items={faqs} />
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" style="font-size: clamp(18px, 2vw, 22px); color: var(--text-muted); font-weight: 500; letter-spacing: 0;">
+        Related
+      </h2>
+    </div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="/vs-squeegee" class="btn btn-secondary">Servogo vs Squeegee — full comparison</a>
+      <a href="/window-cleaning-software" class="btn btn-secondary">Window cleaning software</a>
+    </div>
+  </div>
+</section>
+
+</Base>

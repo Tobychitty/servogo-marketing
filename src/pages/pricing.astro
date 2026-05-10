@@ -1,0 +1,103 @@
+---
+import Base from '../layouts/Base.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: "How long is the free trial?",
+    a: "14 days. No card required to start. You get the full Team plan during the trial: route optimisation, up to 10 users, quotes, invoices, payroll tracking, the lot. Convert when you're ready.",
+  },
+  {
+    q: "What happens at the end of the trial?",
+    a: "You choose a plan and add a card, or you don't and the account pauses. No automatic charges, no sneaky upgrades. Your data stays in the account for 30 days after a trial expires.",
+  },
+  {
+    q: "Can I switch plans as my team grows?",
+    a: "Yes. Move from Sole Trader to Team when you hire, and from Team to Pro when you pass 10 users. Your billing adjusts on the next cycle. Downgrading works the same way.",
+  },
+  {
+    q: "Does annual billing lock me in?",
+    a: "Annual billing saves 20% and is charged up front for the year. If you cancel mid-year, the account stays active until the end of the annual period. No refunds for unused months, but you keep everything until it expires.",
+  },
+  {
+    q: "Are prices including or excluding VAT?",
+    a: "All prices shown exclude VAT. VAT at 20% is added at checkout for UK businesses.",
+  },
+];
+---
+
+<Base
+  title="Pricing | Servogo — Field Service Software"
+  description="Servogo pricing: £25/month sole trader, £22/user team, £18/user pro. 14-day free trial, no card required. UK field service software for recurring-service trades."
+  pageType="pricing"
+  breadcrumbs={[{ name: 'Pricing', url: '/pricing' }]}
+>
+
+<section class="pricing section" id="pricing" style="border-top: none;">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Pricing</span>
+      <h1 class="section-title">Priced for the way trades grow.</h1>
+      <p class="section-sub">A flat rate while you&rsquo;re solo. Per-seat once you&rsquo;ve hired a crew, getting cheaper as you scale. Annual billing saves 20% on every plan.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card solo-card reveal">
+        <div class="price-tier">Sole Trader</div>
+        <div class="price-amount"><span class="cur">&pound;</span><span class="num">25</span><span class="per">/month</span></div>
+        <p class="price-desc">For owner-operators running the route themselves. &pound;20/month billed annually.</p>
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-secondary price-cta">Start free</a>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> 1 user</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Scheduling &amp; day view</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Route optimisation</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Client directory &amp; job history</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Invoicing &amp; quotes</li>
+        </ul>
+      </div>
+
+      <div class="price-card featured reveal">
+        <div class="price-tier">Team <span class="pill">Most popular</span></div>
+        <div class="price-amount"><span class="cur">&pound;</span><span class="num">22</span><span class="per">/user/month</span></div>
+        <p class="price-desc">For crews of 2 to 10 running multiple routes. &pound;17.60/user billed annually.</p>
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary price-cta">Start free</a>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> <strong style="color:inherit;">2 to 10 users</strong></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Everything in Sole Trader</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Team &amp; personnel management</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Roles &amp; permissions</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Payroll tracking</li>
+        </ul>
+      </div>
+
+      <div class="price-card plus-card reveal">
+        <div class="price-tier">Pro</div>
+        <div class="price-amount"><span class="cur">&pound;</span><span class="num">18</span><span class="per">/user/month</span></div>
+        <p class="price-desc">For established crews of 11 to 25. &pound;14.40/user billed annually.</p>
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-secondary price-cta">Start free</a>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> <strong>11 to 25 users</strong></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Everything in Team</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Lower per-seat rate</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Multi-organisation switching</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="pricing-foot" style="color: var(--text-tertiary); font-size: 13.5px;">
+      All plans include a 14-day free trial. No card required to start. Prices exclude VAT.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Pricing, answered.</h2>
+    </div>
+    <FAQ items={faqs} />
+  </div>
+</section>
+
+</Base>

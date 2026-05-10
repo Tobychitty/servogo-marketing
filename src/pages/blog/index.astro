@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+
+function formatDate(d: Date) {
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+---
+
+<Base
+  title="Blog | Servogo — Field Service Software"
+  description="Guides and advice for window cleaners, gardeners, and other field service businesses on scheduling, routing, invoicing, and running a service business."
+  pageType="blog"
+  breadcrumbs={[{ name: 'Blog', url: '/blog' }]}
+>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Blog</span>
+      <h1 class="section-title">Guides for field service businesses.</h1>
+      <p class="section-sub">Scheduling, routing, invoicing, and running a service business. Written for the trades, not for software buyers.</p>
+    </div>
+
+    {posts.length === 0 ? (
+      <p style="color: var(--text-muted); font-size: 16px;">Posts coming soon.</p>
+    ) : (
+      <div class="blog-grid">
+        {posts.map(post => (
+          <a href={`/blog/${post.id}`} class="blog-card">
+            {post.data.tag && <span class="blog-card-tag">{post.data.tag}</span>}
+            <h2>{post.data.title}</h2>
+            <p>{post.data.description}</p>
+            <span class="blog-card-meta">{formatDate(post.data.pubDate)}</span>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
+
+</Base>

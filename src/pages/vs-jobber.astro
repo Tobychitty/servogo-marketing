@@ -1,0 +1,152 @@
+---
+import Base from '../layouts/Base.astro';
+import ComparisonTable from '../components/ComparisonTable.astro';
+import FAQ from '../components/FAQ.astro';
+
+const rows = [
+  { feature: 'Recurring service plans', servogo: true, competitor: true },
+  { feature: 'Route optimisation', servogo: true, competitor: true },
+  { feature: 'Branded invoices with Stripe payment links', servogo: true, competitor: true },
+  { feature: 'Quotes with client acceptance', servogo: true, competitor: true },
+  { feature: 'Dedicated tech app (offline capable)', servogo: true, competitor: true },
+  { feature: 'Drag-drop reordering with live time recalculation', servogo: true, competitor: false },
+  { feature: 'Weather on the route view', servogo: true, competitor: false },
+  { feature: 'Squeegee CSV import (no remapping)', servogo: true, competitor: false },
+  { feature: 'UK-based pricing (GBP)', servogo: true, competitor: 'Converted from USD' },
+  { feature: 'Sole trader flat rate', servogo: '£25/month', competitor: 'Higher entry price' },
+  { feature: 'Per-seat pricing for small teams', servogo: '£22/user', competitor: 'Higher per-seat' },
+  { feature: 'CRM, marketing, and review features', servogo: false, competitor: true },
+  { feature: 'Two-way accounting sync (Xero, QBO)', servogo: 'CSV export only', competitor: true },
+];
+
+const faqs = [
+  {
+    q: "Is Servogo cheaper than Jobber for a small trades business?",
+    a: "For most UK sole traders and small teams, yes. Servogo's Sole Trader plan is £25/month (£20 annual). Jobber's entry price is higher and quoted in USD, so the actual GBP cost depends on exchange rates. Compare at your team size to see.",
+  },
+  {
+    q: "What does Jobber have that Servogo doesn't?",
+    a: "Jobber has more CRM features, marketing tools, customer review requests, and two-way accounting sync with Xero and QuickBooks. If those matter to your workflow, Jobber has the edge. Servogo exports to CSV for accounting tools but doesn't sync directly yet.",
+  },
+  {
+    q: "What does Servogo have that Jobber doesn't?",
+    a: "Servogo has a weather panel on the day view, drag-drop stop reordering with live arrival time recalculation, and a Squeegee CSV import that needs no column remapping. It's also priced in GBP and built specifically for the UK recurring-service market.",
+  },
+  {
+    q: "Can I import my client list from another tool into Servogo?",
+    a: "Yes. Bulk CSV import with auto field-mapping works for exports from most tools. Squeegee exports are recognised by column name automatically. Email us during the trial if you want a hand with the import.",
+  },
+];
+---
+
+<Base
+  title="Servogo vs Jobber | Field Service Software Compared"
+  description="Comparing Servogo and Jobber for UK field service businesses. Pricing, features, and who each platform suits. Honest comparison for small trades."
+  pageType="comparison"
+  breadcrumbs={[{ name: 'Servogo vs Jobber', url: '/vs-jobber' }]}
+>
+
+<section class="page-hero section-tight">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="section-eyebrow">Comparison</span>
+      <h1>Servogo vs Jobber</h1>
+      <p>
+        Both handle scheduling, routing, and invoicing for field service businesses.
+        Here's where they overlap, where they differ, and which fits your business better.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Feature comparison</span>
+      <h2 class="section-title">Side by side.</h2>
+    </div>
+    <ComparisonTable competitorName="Jobber" rows={rows} />
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+      <div>
+        <span class="section-eyebrow">Who Servogo is for</span>
+        <h2 class="section-title" style="font-size: clamp(22px, 2.5vw, 30px);">Choose Servogo if&hellip;</h2>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You run a recurring-service trade in the UK and want software priced and built for that market.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You're a sole trader or small team and don't want to pay for features you'll never use.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You're moving from Squeegee and want an import that just works.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You want drag-reorder with live arrival time recalculation and a weather panel alongside your route.</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <span class="section-eyebrow">Who should consider Jobber</span>
+        <h2 class="section-title" style="font-size: clamp(22px, 2.5vw, 30px);">Jobber may suit you if&hellip;</h2>
+        <ul class="deep-list" style="--check-bg: var(--bg-muted); --check-color: var(--text-muted);">
+          <li>
+            <span class="check" style="background: var(--bg-muted); color: var(--text-muted);"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You need two-way sync with Xero, QuickBooks, or other accounting software.</span>
+          </li>
+          <li>
+            <span class="check" style="background: var(--bg-muted); color: var(--text-muted);"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You want built-in marketing tools, review requests, or a more developed CRM.</span>
+          </li>
+          <li>
+            <span class="check" style="background: var(--bg-muted); color: var(--text-muted);"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You're scaling beyond 25 users and need the features that come with Jobber's larger plans.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Servogo vs Jobber, answered.</h2>
+    </div>
+    <FAQ items={faqs} />
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" style="font-size: clamp(18px, 2vw, 22px); color: var(--text-muted); font-weight: 500; letter-spacing: 0;">
+        Related
+      </h2>
+    </div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="/jobber-alternative-uk" class="btn btn-secondary">Looking for a Jobber alternative?</a>
+      <a href="/vs-squeegee" class="btn btn-secondary">Servogo vs Squeegee</a>
+      <a href="/window-cleaning-software" class="btn btn-secondary">Window cleaning software</a>
+    </div>
+  </div>
+</section>
+
+</Base>

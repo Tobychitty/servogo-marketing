@@ -1,0 +1,64 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+function formatDate(d: Date) {
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+---
+
+<Base
+  title={`${post.data.title} | Servogo Blog`}
+  description={post.data.description}
+  pageType="blog"
+  breadcrumbs={[
+    { name: 'Blog', url: '/blog' },
+    { name: post.data.title, url: `/blog/${post.id}` },
+  ]}
+>
+
+<section class="section">
+  <div class="container">
+    <div style="max-width: 720px;">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="/blog">Blog</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <span>{post.data.title}</span>
+      </nav>
+
+      {post.data.tag && <span class="section-eyebrow">{post.data.tag}</span>}
+      <h1 style="font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 600; margin: 12px 0 16px; color: var(--ink); text-wrap: balance;">{post.data.title}</h1>
+      <p style="font-size: 15px; color: var(--text-tertiary); margin: 0 0 48px;">{formatDate(post.data.pubDate)}</p>
+
+      <article class="prose">
+        <Content />
+      </article>
+
+      {post.data.relatedPages && post.data.relatedPages.length > 0 && (
+        <div style="margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--stroke-regular);">
+          <p style="font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-tertiary); margin: 0 0 16px;">Related</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            {post.data.relatedPages.map(page => (
+              <a href={page.url} class="btn btn-secondary">{page.label}</a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+</Base>

@@ -1,0 +1,177 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const docs = await getCollection('docs');
+  return docs.map(doc => ({
+    params: { slug: doc.id },
+    props: { doc },
+  }));
+}
+
+const { doc } = Astro.props;
+const { Content } = await render(doc);
+
+const allDocs = (await getCollection('docs')).sort((a, b) => a.data.order - b.data.order);
+
+const sections: Record<string, typeof allDocs> = {};
+for (const d of allDocs) {
+  if (!sections[d.data.section]) sections[d.data.section] = [];
+  sections[d.data.section].push(d);
+}
+
+const sectionOrder = ['Getting started', 'Features', 'Settings', 'Concepts', 'Troubleshooting'];
+const sortedSections = sectionOrder.filter(s => sections[s]);
+---
+
+<Base
+  title={`${doc.data.title} | Servogo Docs`}
+  description={doc.data.description}
+  breadcrumbs={[
+    { name: 'Docs', url: '/docs' },
+    { name: doc.data.title, url: `/docs/${doc.id}` },
+  ]}
+>
+
+<div class="docs-layout">
+  <aside class="docs-sidebar">
+    <nav aria-label="Documentation">
+      {sortedSections.map(section => (
+        <div class="docs-nav-section">
+          <p class="docs-nav-heading">{section}</p>
+          <ul>
+            {sections[section].map(d => (
+              <li>
+                <a
+                  href={`/docs/${d.id}`}
+                  class={`docs-nav-link${d.id === doc.id ? ' active' : ''}`}
+                >
+                  {d.data.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </nav>
+  </aside>
+
+  <main class="docs-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <a href="/docs">Docs</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span>{doc.data.title}</span>
+    </nav>
+
+    <span class="section-eyebrow">{doc.data.section}</span>
+    <h1 style="font-size: clamp(24px, 3.5vw, 38px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600; margin: 12px 0 32px; color: var(--ink); text-wrap: balance;">{doc.data.title}</h1>
+
+    <article class="prose">
+      <Content />
+    </article>
+
+    {doc.data.relatedPages && doc.data.relatedPages.length > 0 && (
+      <div style="margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--stroke-regular);">
+        <p style="font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-tertiary); margin: 0 0 16px;">Related</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          {doc.data.relatedPages.map(page => (
+            <a href={page.url} class="btn btn-secondary">{page.label}</a>
+          ))}
+        </div>
+      </div>
+    )}
+  </main>
+</div>
+
+</Base>
+
+<style>
+.docs-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  min-height: calc(100vh - 64px);
+  align-items: start;
+}
+
+.docs-sidebar {
+  position: sticky;
+  top: 80px;
+  padding-right: 40px;
+  border-right: 1px solid var(--stroke-regular);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.docs-nav-section {
+  margin-bottom: 28px;
+}
+
+.docs-nav-heading {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin: 0 0 8px;
+}
+
+.docs-nav-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.docs-nav-link {
+  display: block;
+  padding: 5px 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.12s, color 0.12s;
+}
+
+.docs-nav-link:hover {
+  background: var(--fill-hover);
+  color: var(--ink);
+}
+
+.docs-nav-link.active {
+  background: var(--accent-bg, #eef2ff);
+  color: var(--accent, #4f46e5);
+  font-weight: 500;
+}
+
+.docs-content {
+  padding-left: 48px;
+  max-width: 720px;
+}
+
+@media (max-width: 768px) {
+  .docs-layout {
+    grid-template-columns: 1fr;
+    padding: 24px 16px;
+  }
+
+  .docs-sidebar {
+    position: static;
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--stroke-regular);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    max-height: none;
+  }
+
+  .docs-content {
+    padding-left: 0;
+  }
+}
+</style>

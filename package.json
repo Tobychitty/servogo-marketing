@@ -1,0 +1,19 @@
+{
+  "name": "servogo-marketing",
+  "version": "1.0.0",
+  "description": "Static marketing site for Servogo. Plain HTML/CSS/JS — no build step.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.3.1"
+  }
+}

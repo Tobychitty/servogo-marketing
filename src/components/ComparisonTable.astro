@@ -1,0 +1,45 @@
+---
+interface Row {
+  feature: string;
+  servogo: string | boolean;
+  competitor: string | boolean;
+}
+
+interface Props {
+  competitorName: string;
+  rows: Row[];
+}
+
+const { competitorName, rows } = Astro.props;
+
+function renderCell(val: string | boolean) {
+  if (val === true) return { cls: 'yes', text: 'Yes' };
+  if (val === false) return { cls: 'no', text: 'No' };
+  return { cls: '', text: val };
+}
+---
+
+<div class="comparison-table-wrap">
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Servogo</th>
+        <th>{competitorName}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map(row => {
+        const sg = renderCell(row.servogo);
+        const comp = renderCell(row.competitor);
+        return (
+          <tr>
+            <td>{row.feature}</td>
+            <td class={sg.cls}>{sg.text}</td>
+            <td class={comp.cls}>{comp.text}</td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</div>

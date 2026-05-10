@@ -1,0 +1,167 @@
+---
+import Base from '../layouts/Base.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: "How does Servogo handle regular pool maintenance visits?",
+    a: "Each client gets a service plan with their maintenance frequency. Weekly chemical checks, fortnightly cleans, monthly filter services, each runs on its own schedule. Servogo books the next visit automatically when the last one closes.",
+  },
+  {
+    q: "Can my technicians log what they did at each pool visit?",
+    a: "Yes. The tech app lets technicians mark a visit complete with notes and photos. These are stored against the visit record and visible in the client's history. Useful for logging chemical readings, equipment observations, or anything that needs following up.",
+  },
+  {
+    q: "How does invoicing work for pool maintenance contracts?",
+    a: "Each completed visit creates a draft invoice. Invoice per visit, or roll multiple visits into a monthly invoice for each client. Send by email with a Stripe payment link. Clients pay online, it marks itself paid.",
+  },
+  {
+    q: "Can I manage multiple technicians covering different areas?",
+    a: "Yes. Each technician has their own route, their own login, and sees only their own jobs in the app. You and managers see all routes. Route optimisation runs per technician, finding the shortest path between their pools for the day.",
+  },
+  {
+    q: "Can I quote for a new pool installation or setup service?",
+    a: "Yes. Create a quote with line items, send to the client by email, they accept via a link, and you convert it into a job in one click. No double entry.",
+  },
+  {
+    q: "Does the app work without signal at remote properties?",
+    a: "The app caches the day's route on load. Technicians can mark visits complete, add notes, and take photos without signal. Everything syncs when they're back on data.",
+  },
+];
+---
+
+<Base
+  title="Pool Service Software | Servogo"
+  description="Software for pool service and maintenance businesses. Manage recurring service schedules, route your technicians, log visit records, and invoice clients. UK-based, free trial."
+  pageType="trade"
+  breadcrumbs={[{ name: 'Pool service software', url: '/pool-service-software' }]}
+>
+
+<section class="page-hero section-tight">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="section-eyebrow">Pool service</span>
+      <h1>Pool service software for recurring maintenance schedules and multi-tech teams</h1>
+      <p>
+        Recurring service plans, route planning for the day's pools, logged visit records,
+        and invoices paid by card. Built for pool service businesses.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary btn-lg">
+          Start free
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h8M8 3l4 4-4 4"/></svg>
+        </a>
+        <a href="/#pricing" class="btn btn-secondary btn-lg">See pricing</a>
+      </div>
+      <div class="hero-meta" style="justify-content: flex-start;">
+        <span><svg class="check" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7.5l3 3 7-7"/></svg> 14-day free trial</span>
+        <span class="sep"></span>
+        <span>No card required</span>
+        <span class="sep"></span>
+        <span>UK-based</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Service schedules</span>
+        <h2>Every pool on its own maintenance schedule.</h2>
+        <p class="lede">Set each client's service frequency once. Weekly, fortnightly, or monthly. Servogo books the next visit when the last one closes. Your regular contracts look after themselves.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Visit records per pool.</strong> Notes, photos, and completion details logged against every visit. The full service history for each pool is always there when you need it.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Reschedule without losing the contract.</strong> Move a visit from the day view when needed. The recurring plan resumes from the new date without disrupting the maintenance frequency.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Quotes that become jobs.</strong> Quote a new contract, get sign-off via email, convert into a recurring service plan in one click.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / schedule</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-schedule.png" alt="Servogo schedule showing pool maintenance visits" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep reverse">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Routing and field team</span>
+        <h2>Route your technicians between pools efficiently.</h2>
+        <p class="lede">Map out the day's pools, optimise the order with one click, and send technicians off with their route on their phone. Each tech sees only their own jobs.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Per-technician route optimisation.</strong> Each tech's route is optimised independently. Home-start and home-return included if you want it.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Completion notes and photos in the field.</strong> Techs log what they did at each pool directly in the app. You see it in the visit record straight away.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Payroll tracking per technician.</strong> Flat rate per visit or commission percentage. Earnings calculated from completed visits by pay period.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / day-view</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-day-view.png" alt="Servogo day view for pool service technician route" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Pool service software, answered.</h2>
+    </div>
+    <FAQ items={faqs} />
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" style="font-size: clamp(18px, 2vw, 22px); color: var(--text-muted); font-weight: 500; letter-spacing: 0;">
+        See how Servogo compares
+      </h2>
+    </div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="/vs-jobber" class="btn btn-secondary">Servogo vs Jobber</a>
+      <a href="/jobber-alternative-uk" class="btn btn-secondary">Looking for a Jobber alternative?</a>
+    </div>
+  </div>
+</section>
+
+</Base>

@@ -1,0 +1,116 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const allDocs = (await getCollection('docs')).sort((a, b) => a.data.order - b.data.order);
+
+const sections: Record<string, typeof allDocs> = {};
+for (const doc of allDocs) {
+  if (!sections[doc.data.section]) sections[doc.data.section] = [];
+  sections[doc.data.section].push(doc);
+}
+
+const sectionOrder = ['Getting started', 'Features', 'Settings', 'Concepts', 'Troubleshooting'];
+const sortedSections = sectionOrder.filter(s => sections[s]);
+---
+
+<Base
+  title="Servogo Docs — Field Service Management Help"
+  description="Documentation for Servogo: scheduling, routing, invoicing, client management, and troubleshooting guides for field service businesses."
+  breadcrumbs={[{ name: 'Docs', url: '/docs' }]}
+>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Documentation</span>
+      <h1 class="section-title">How to use Servogo.</h1>
+      <p class="section-sub">Guides for every part of the platform, from your first day to advanced scheduling.</p>
+    </div>
+
+    <div class="docs-index-grid">
+      {sortedSections.map(section => (
+        <div class="docs-section-card">
+          <h2 class="docs-section-title">{section}</h2>
+          <ul class="docs-section-list">
+            {sections[section].map(doc => (
+              <li>
+                <a href={`/docs/${doc.id}`} class="docs-index-link">
+                  <span class="docs-index-link-title">{doc.data.title}</span>
+                  <span class="docs-index-link-desc">{doc.data.description}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div style="margin-top: 64px; padding: 32px; background: var(--fill-subtle, #f8f9fa); border-radius: 12px; text-align: center;">
+      <p style="font-size: 16px; color: var(--text-secondary); margin: 0 0 16px;">Can't find what you're looking for?</p>
+      <a href="mailto:support@servogo.co.uk" class="btn btn-primary">Email support</a>
+    </div>
+  </div>
+</section>
+
+</Base>
+
+<style>
+.docs-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.docs-section-card {
+  padding: 28px;
+  border: 1px solid var(--stroke-regular);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.docs-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin: 0 0 16px;
+}
+
+.docs-section-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.docs-index-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.12s;
+}
+
+.docs-index-link:hover {
+  background: var(--fill-hover);
+}
+
+.docs-index-link-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.docs-index-link-desc {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  line-height: 1.4;
+}
+</style>

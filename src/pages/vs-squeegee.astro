@@ -1,0 +1,184 @@
+---
+import Base from '../layouts/Base.astro';
+import ComparisonTable from '../components/ComparisonTable.astro';
+import FAQ from '../components/FAQ.astro';
+
+const rows = [
+  { feature: 'Recurring service plans', servogo: true, competitor: true },
+  { feature: 'Day view with live map', servogo: true, competitor: true },
+  { feature: 'Route optimisation', servogo: true, competitor: true },
+  { feature: 'Drag-drop reordering with live time recalculation', servogo: true, competitor: false },
+  { feature: 'Weather on the day view', servogo: true, competitor: false },
+  { feature: 'Branded PDF invoices', servogo: true, competitor: true },
+  { feature: 'Stripe payment links on invoices', servogo: true, competitor: false },
+  { feature: 'Quotes with client email acceptance', servogo: true, competitor: false },
+  { feature: 'Payroll tracking for technicians', servogo: true, competitor: false },
+  { feature: 'Dedicated tech app (offline capable)', servogo: true, competitor: true },
+  { feature: 'Squeegee CSV import (no remapping needed)', servogo: true, competitor: 'N/A' },
+  { feature: 'UK-based pricing (GBP)', servogo: true, competitor: true },
+];
+
+const faqs = [
+  {
+    q: "Will my Squeegee client list import into Servogo without any manual work?",
+    a: "Yes. Export your clients, service plans, and history from Squeegee as CSV. Import that file into Servogo. Squeegee's column names are recognised automatically, so there's nothing to remap. Most migrations take an evening.",
+  },
+  {
+    q: "What does Servogo have that Squeegee doesn't?",
+    a: "Stripe payment links on invoices (clients pay by card, the invoice marks itself paid), drag-drop reordering with live arrival time recalculation, a weather panel on the day view, quotes with client email acceptance, and payroll tracking per technician.",
+  },
+  {
+    q: "Is Servogo more expensive than Squeegee?",
+    a: "Servogo starts at £25/month for a sole trader, dropping to £20/month on annual billing. Compare that against your current Squeegee subscription to see where you land. All plans include a 14-day free trial, no card required.",
+  },
+  {
+    q: "Can I try Servogo before committing?",
+    a: "Yes. The 14-day trial gives you the full Team plan, no card required. Import your Squeegee data during the trial to see exactly how the migration works before you decide.",
+  },
+];
+---
+
+<Base
+  title="Servogo vs Squeegee | Field Service Software Compared"
+  description="Comparing Servogo and Squeegee for window cleaning and field service businesses. See what each platform offers, where they differ, and who should use which."
+  pageType="comparison"
+  breadcrumbs={[{ name: 'Servogo vs Squeegee', url: '/vs-squeegee' }]}
+>
+
+<section class="page-hero section-tight">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="section-eyebrow">Comparison</span>
+      <h1>Servogo vs Squeegee</h1>
+      <p>
+        Both are built for UK window cleaners and field service businesses.
+        Here's where they overlap, where they differ, and which is the better fit for your business.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Feature comparison</span>
+      <h2 class="section-title">Side by side.</h2>
+    </div>
+    <ComparisonTable competitorName="Squeegee" rows={rows} />
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+      <div>
+        <span class="section-eyebrow">Who Servogo is for</span>
+        <h2 class="section-title" style="font-size: clamp(22px, 2.5vw, 30px);">Choose Servogo if&hellip;</h2>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You want clients to pay invoices online by card, automatically marked paid when they do.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You need to send and track quotes before scheduling work.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You're growing a team and need payroll tracking, roles, and separate tech logins.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You want arrival times to update live when you drag a stop, not just reorder the list.</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <span class="section-eyebrow">Who should stay with Squeegee</span>
+        <h2 class="section-title" style="font-size: clamp(22px, 2.5vw, 30px);">Stick with Squeegee if&hellip;</h2>
+        <ul class="deep-list" style="--check-bg: var(--bg-muted); --check-color: var(--text-muted);">
+          <li>
+            <span class="check" style="background: var(--bg-muted); color: var(--text-muted);"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You've built your whole workflow around Squeegee's specific UI and don't want to relearn.</span>
+          </li>
+          <li>
+            <span class="check" style="background: var(--bg-muted); color: var(--text-muted);"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span>You have a large community of Squeegee-specific integrations or plugins you depend on.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Migration</span>
+        <h2>Moving from Squeegee takes an evening.</h2>
+        <p class="lede">Servogo's CSV import recognises Squeegee's column names out of the box. Export your client list from Squeegee, import the file into Servogo, and your rounds, addresses, and service frequencies land exactly as they were.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>No remapping.</strong> Squeegee's column names (customer name, address, frequency, price) are all recognised. Drop the file in and it maps itself.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Try it during the 14-day trial.</strong> Import your Squeegee data, run the schedule for a week, and see how Servogo fits before you cancel your current plan.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>We'll help if you get stuck.</strong> Email us during the trial and we'll walk you through the import. Real humans, no bot triage.</span>
+          </li>
+        </ul>
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary">Start free trial</a>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / clients / import</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-clients.png" alt="Servogo client import from Squeegee CSV" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Servogo vs Squeegee, answered.</h2>
+    </div>
+    <FAQ items={faqs} />
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" style="font-size: clamp(18px, 2vw, 22px); color: var(--text-muted); font-weight: 500; letter-spacing: 0;">
+        Related
+      </h2>
+    </div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="/squeegee-alternative" class="btn btn-secondary">Looking for a Squeegee alternative?</a>
+      <a href="/window-cleaning-software" class="btn btn-secondary">Window cleaning software</a>
+      <a href="/vs-jobber" class="btn btn-secondary">Servogo vs Jobber</a>
+    </div>
+  </div>
+</section>
+
+</Base>

@@ -1,0 +1,167 @@
+---
+import Base from '../layouts/Base.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: "How does Servogo handle recurring cleaning contracts?",
+    a: "Each client gets a service plan with their cleaning frequency. Servogo automatically books the next clean when the previous one is marked complete. Weekly domestic cleans, fortnightly office visits, whatever the contract says, it runs without you touching it.",
+  },
+  {
+    q: "Can I manage multiple cleaners on different jobs at the same time?",
+    a: "Yes. Each cleaner has their own route and their own login. They see only their own jobs in the tech app. Owners and managers see all routes. You set which days each cleaner works, and the schedule respects it.",
+  },
+  {
+    q: "Can cleaners take photos at the end of a job?",
+    a: "Yes. The tech app lets cleaners mark a job complete with optional completion notes and photos. These are logged against the visit record. Useful for end-of-clean sign-off or flagging any issues at a property.",
+  },
+  {
+    q: "How does invoicing work for a cleaning business?",
+    a: "Each completed clean creates a draft invoice. Send it per visit for residential clients, or batch multiple cleans into a monthly invoice for commercial accounts. Clients pay by email link using Stripe. The invoice marks itself paid when they do.",
+  },
+  {
+    q: "Can I send quotes before taking on a new client?",
+    a: "Yes. Create a quote with line items, send it by email, and the client accepts via a link. Once accepted, convert it into a scheduled job in one click. No double entry.",
+  },
+  {
+    q: "Is there a way to keep notes on each property?",
+    a: "Yes. Client records support notes alongside contact details, service plans, and visit history. Notes are visible in the tech app when a cleaner opens the job, so they know about any access instructions, alarm codes, or preferences before they arrive.",
+  },
+];
+---
+
+<Base
+  title="Cleaning Business Software | Servogo"
+  description="Software for cleaning businesses. Manage recurring cleaning schedules, coordinate your team, send branded invoices, and get paid online. UK-based, free 14-day trial."
+  pageType="trade"
+  breadcrumbs={[{ name: 'Cleaning business software', url: '/cleaning-business-software' }]}
+>
+
+<section class="page-hero section-tight">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="section-eyebrow">Cleaning</span>
+      <h1>Cleaning business software for regular domestic and commercial contracts</h1>
+      <p>
+        Recurring schedules, a team app for your cleaners, invoicing that gets you paid by card,
+        and a full history of every clean on record.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary btn-lg">
+          Start free
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h8M8 3l4 4-4 4"/></svg>
+        </a>
+        <a href="/#pricing" class="btn btn-secondary btn-lg">See pricing</a>
+      </div>
+      <div class="hero-meta" style="justify-content: flex-start;">
+        <span><svg class="check" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7.5l3 3 7-7"/></svg> 14-day free trial</span>
+        <span class="sep"></span>
+        <span>No card required</span>
+        <span class="sep"></span>
+        <span>UK-based</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Recurring schedules</span>
+        <h2>Recurring cleans that book themselves.</h2>
+        <p class="lede">Set up a service plan for each client once. The next clean is booked automatically the moment the last one closes. Your regular work runs on its own.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Weekly or fortnightly residential, monthly commercial.</strong> Each client runs on their own frequency. Mix and match across your whole client list without any manual scheduling.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Completion photos and notes.</strong> Cleaners mark jobs done in the app with optional photos. Logged against the visit record for your peace of mind and theirs.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Per-property notes in the app.</strong> Access instructions, alarm codes, client preferences. Visible to the cleaner when they open the job, not buried in a spreadsheet.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / schedule</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-schedule.png" alt="Servogo schedule showing recurring cleaning visits" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep reverse">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Your team</span>
+        <h2>Your cleaners know exactly where to be.</h2>
+        <p class="lede">Each cleaner gets their own app. Their route for the day, the address and job notes for each property, and a one-tap handoff to their maps app for navigation.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>No access to pricing or other routes.</strong> Cleaners see their own jobs only. Rates, other staff, client financials, none of that is visible to them.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Payroll tracking per cleaner.</strong> Set a commission percentage or flat rate per visit for each team member. Servogo calculates earnings from completed jobs, by pay period.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Works offline.</strong> The app caches the day's route on load. Cleaners can complete jobs, take photos, and add notes without a signal. Syncs when they're back on data.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / day-view</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-day-view.png" alt="Servogo day view for cleaning team route" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Cleaning business software, answered.</h2>
+    </div>
+    <FAQ items={faqs} />
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" style="font-size: clamp(18px, 2vw, 22px); color: var(--text-muted); font-weight: 500; letter-spacing: 0;">
+        See how Servogo compares
+      </h2>
+    </div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="/vs-jobber" class="btn btn-secondary">Servogo vs Jobber</a>
+      <a href="/jobber-alternative-uk" class="btn btn-secondary">Looking for a Jobber alternative?</a>
+    </div>
+  </div>
+</section>
+
+</Base>

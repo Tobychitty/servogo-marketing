@@ -1,0 +1,311 @@
+---
+import Base from '../layouts/Base.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: "I'm moving from Squeegee. Will my client list come across?",
+    a: "Yes. Export your clients from Squeegee to CSV and drop the file into Servogo's import dialog. Squeegee's column names are recognised out of the box, so there's nothing to remap. Bulk CSV import with auto field-mapping works for any other tool too. Email us during the trial if you want a hand.",
+  },
+  {
+    q: "Can my technicians log in and see their own jobs?",
+    a: "Yes. Each technician gets their own login and a dedicated mobile app. They see their own route, their own stops, and the address and notes for each visit. They can mark visits complete with optional photos and notes, and don't see other technicians' routes, the client list, or pricing. Owners and managers see everything. Roles are set when you send the invite.",
+  },
+  {
+    q: "Does the tech app work without signal?",
+    a: "The tech app caches the day's route on load. Technicians can mark visits complete, take photos, and add notes offline. Everything syncs back when connectivity returns.",
+  },
+  {
+    q: "How does pricing work as my team grows?",
+    a: "Solo, Sole Trader is a flat &pound;25 per month. Once you hire, Team is &pound;22 per user / month for 2 to 10 users, and Pro drops to &pound;18 per user / month for 11 to 25, so the per-seat rate gets cheaper as you grow. Annual billing saves 20% on every plan. Adding a teammate adjusts your subscription on the next billing cycle.",
+  },
+  {
+    q: "Do you connect to Xero, QuickBooks, or FreeAgent?",
+    a: "Not directly, not yet. Clients, service plans, job history, invoices, and payroll all export to CSV, which most accounting tools accept. Stripe payment links handle online card payments, and manual payments (cash, bank transfer, etc.) record in one click.",
+  },
+  {
+    q: "Can I export my data if I leave?",
+    a: "Always. Clients, service plans, job history, invoices, and payroll all export to CSV with one click. Your data is yours, and you can take it with you any time.",
+  },
+  {
+    q: "How long is the trial?",
+    a: "14 days, no card up front. You get the full Team plan during the trial: route optimisation, up to 10 users, quotes, invoices, payroll tracking, the lot. Convert when you're ready, not when a timer says so.",
+  },
+  {
+    q: "Can I cancel any time?",
+    a: "Yes. One click in Settings, no retention call, no &ldquo;are you sure&rdquo; gauntlet. Your account stays active until the end of the current billing period.",
+  },
+];
+---
+
+<Base
+  title="Servogo · Field service software for owner-run trades"
+  description="Schedule recurring jobs, plan the day's route, log every visit, send branded invoices. Field service software for owner-run trades and the crews they grow into."
+  pageType="home"
+>
+
+<!-- ─── Hero ─────────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="eyebrow">
+        <span class="dot"></span>
+        <span><strong>New</strong> &middot; One-click route optimisation</span>
+      </span>
+      <h1>
+        The simplest way to <span class="accent">run a service business</span>
+      </h1>
+      <p class="hero-sub">
+        Recurring schedules, optimised routes, branded invoices, and a dedicated app for the field.
+        Built for owner-run trades and the crews they grow into.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary btn-lg">
+          Start free
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h8M8 3l4 4-4 4"/></svg>
+        </a>
+        <a href="#features" class="btn btn-secondary btn-lg">See how it works</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg class="check" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7.5l3 3 7-7"/></svg> 14-day trial</span>
+        <span class="sep"></span>
+        <span>No card required</span>
+        <span class="sep"></span>
+        <span>Squeegee CSV imports recognised</span>
+      </div>
+    </div>
+
+    <div class="hero-shot-wrap reveal">
+      <div class="browser" aria-hidden="true">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            app.servogo.co.uk / day-view
+          </div>
+          <div style="width: 56px;"></div>
+        </div>
+        <img src="/assets/screen-day-view.png" alt="Servogo day view: today's route and schedule" class="browser-shot" loading="eager" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Three-up feature grid ───────────────────────────── -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">The core loop</span>
+      <h2 class="section-title">Schedule. Route. Invoice.</h2>
+      <p class="section-sub">The work that runs on spreadsheets, sticky notes, and group chats today. In one tool, properly built for it.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/><path d="M8 15h2M14 15h2M8 18h2"/></svg>
+        </div>
+        <h3>Scheduling</h3>
+        <p>Recurring service plans book themselves. Drag stops to reorder the day. Add a one-off in two clicks.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5a3 3 0 1 0 6 0 3 3 0 1 0-6 0z"/><path d="M12 2C7.5 2 4 5.5 4 10c0 6 8 12 8 12s8-6 8-12c0-4.5-3.5-8-8-8z"/></svg>
+        </div>
+        <h3>Routing</h3>
+        <p>Every stop on a live map. One click optimises for the shortest path. Hourly weather, in the same view.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v6h6"/><path d="M9 14h6M9 17h4"/></svg>
+        </div>
+        <h3>Invoicing</h3>
+        <p>Finished visits become draft invoices. Branded PDFs, sent by email, paid by Stripe. Status tracking, end to end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ─── Deep-dive: Scheduling ───────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="deep">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Scheduling</span>
+        <h2>The week, on one page.</h2>
+        <p class="lede">Every recurring service plan in one table. See who&rsquo;s next, what they pay, when you last visited. Add a one-off without leaving the page.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Recurring plans that hold up.</strong> Weekly, monthly, specific-day frequencies. Servogo books the next visit the moment the last one closes.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Per-tech working days.</strong> Set who works which days, and the schedule respects it. Each technician has their own home address for routing.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Migrate in an evening.</strong> Bulk CSV import with auto field-mapping. Squeegee column names recognised out of the box, so there&rsquo;s nothing to remap.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / schedule</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-schedule.png" alt="Servogo schedule: recurring service plans" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Deep-dive: Routing ───────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="deep reverse">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Routing</span>
+        <h2>The shortest path through the day.</h2>
+        <p class="lede">Plot every stop on the day view&rsquo;s map. One click optimises for distance. Drag a stop, and arrival times recalculate live.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>One-click optimise.</strong> Shortest-path ordering with optional home-start and home-return. Configurable breaks between stops, recalculated whenever the day shifts.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Weather on the route.</strong> Current conditions and the hourly forecast for the day, sourced from OpenWeather, alongside the stop list.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Built for the field, too.</strong> The Servogo tech app shows each technician their own route, with one-tap handoff to maps and offline caching for spotty signal.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / day-view</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-day-view.png" alt="Servogo day view: live route and stop list" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Deep-dive: Invoicing ─────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="deep">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Invoicing</span>
+        <h2>From finished job to paid, faster.</h2>
+        <p class="lede">Servogo turns each completed visit into a draft invoice. Per visit, rolling per client, or batched at month end. Pick the cadence that suits.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Get paid online.</strong> Stripe payment link on every invoice. The customer pays, the invoice marks itself paid. No reconciliation.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Branded for your business.</strong> Your logo and primary colour on every PDF, email, and quote. VAT-inclusive or exclusive, your numbering scheme, your terms.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Quotes that flow into jobs.</strong> Draft, send, accept, then convert into scheduled work in one click. No double entry between systems.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / invoices</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-invoices.png" alt="Servogo invoices: outstanding payments" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Pricing ──────────────────────────────────────────── -->
+<section class="pricing section" id="pricing">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Pricing</span>
+      <h2 class="section-title">Priced for the way trades grow.</h2>
+      <p class="section-sub">A flat rate while you&rsquo;re solo. Per-seat once you&rsquo;ve hired a crew, getting cheaper as you scale. Annual billing saves 20% on every plan.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card solo-card reveal">
+        <div class="price-tier">Sole Trader</div>
+        <div class="price-amount"><span class="cur">&pound;</span><span class="num">25</span><span class="per">/month</span></div>
+        <p class="price-desc">For owner-operators running the route themselves. &pound;20/month billed annually.</p>
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-secondary price-cta">Start free</a>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> 1 user</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Scheduling &amp; day view</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Route optimisation</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Client directory &amp; job history</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Invoicing &amp; quotes</li>
+        </ul>
+      </div>
+
+      <div class="price-card featured reveal">
+        <div class="price-tier">Team <span class="pill">Most popular</span></div>
+        <div class="price-amount"><span class="cur">&pound;</span><span class="num">22</span><span class="per">/user/month</span></div>
+        <p class="price-desc">For crews of 2 to 10 running multiple routes. &pound;17.60/user billed annually.</p>
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary price-cta">Start free</a>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> <strong style="color:inherit;">2 to 10 users</strong></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Everything in Sole Trader</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Team &amp; personnel management</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Roles &amp; permissions</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Payroll tracking</li>
+        </ul>
+      </div>
+
+      <div class="price-card plus-card reveal">
+        <div class="price-tier">Pro</div>
+        <div class="price-amount"><span class="cur">&pound;</span><span class="num">18</span><span class="per">/user/month</span></div>
+        <p class="price-desc">For established crews of 11 to 25. &pound;14.40/user billed annually.</p>
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-secondary price-cta">Start free</a>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> <strong>11 to 25 users</strong></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Everything in Team</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Lower per-seat rate</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg> Multi-organisation switching</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="pricing-foot" style="color: var(--text-tertiary); font-size: 13.5px;">
+      All plans include a 14-day free trial. No card required to start. Prices exclude VAT.
+    </p>
+  </div>
+</section>
+
+<!-- ─── FAQ ─────────────────────────────────────────────── -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Asked &amp; answered.</h2>
+      <p class="section-sub">Anything else on your mind, email us. Real humans, no bot triage.</p>
+    </div>
+    <FAQ items={faqs} />
+  </div>
+</section>
+
+</Base>

@@ -1,0 +1,204 @@
+---
+import Base from '../layouts/Base.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: "Can I bring my Squeegee client list across?",
+    a: "Yes. Export from Squeegee to CSV and import into Servogo. Squeegee's column names are recognised out of the box, so there's nothing to remap. Your rounds, addresses, and service frequencies come across with them. Email us during the trial if you want a hand with the migration.",
+  },
+  {
+    q: "How does Servogo handle recurring window cleaning rounds?",
+    a: "Each client gets a service plan with their frequency: weekly, fortnightly, monthly, or a specific day pattern. Servogo books the next job automatically when the last one closes. No reminders needed, no manually scheduling each visit.",
+  },
+  {
+    q: "Can I plan the most efficient order to clean a round?",
+    a: "Yes. Open the day view, hit optimise, and Servogo reorders your stops for the shortest path. It accounts for your home address as a start point if you want. Drag any stop to override the order, and arrival times recalculate live.",
+  },
+  {
+    q: "Does the tech app work offline on-site?",
+    a: "The app caches the day's route when it loads. Your cleaners can mark jobs complete, add notes, and take photos without a signal. Everything syncs when they're back on data.",
+  },
+  {
+    q: "How does invoicing work for window cleaning?",
+    a: "Servogo generates a draft invoice from each completed visit. You choose the cadence: per visit, rolling per client, or monthly batch. Send it by email with a Stripe payment link so customers can pay by card. The invoice marks itself paid when they do.",
+  },
+  {
+    q: "Can I run multiple rounds with different cleaners?",
+    a: "Yes. Each technician has their own route, their own login, and their own app view. They see only their own jobs. You and your managers see all routes. Per-tech pay rules let you track commission or flat-per-visit earnings separately.",
+  },
+];
+---
+
+<Base
+  title="Window Cleaning Scheduling Software | Servogo"
+  description="Scheduling software built for window cleaning businesses. Manage recurring rounds, optimise your route, invoice clients, and run your team from one place. UK-based, free trial."
+  pageType="trade"
+  breadcrumbs={[{ name: 'Window cleaning software', url: '/window-cleaning-software' }]}
+>
+
+<section class="page-hero section-tight">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="section-eyebrow">Window cleaning</span>
+      <h1>Scheduling software that knows how a window cleaning round works</h1>
+      <p>
+        Recurring rounds, route optimisation, Squeegee CSV import, and invoices that get paid by card.
+        Built for window cleaners running their own business.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary btn-lg">
+          Start free
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h8M8 3l4 4-4 4"/></svg>
+        </a>
+        <a href="/#pricing" class="btn btn-secondary btn-lg">See pricing</a>
+      </div>
+      <div class="hero-meta" style="justify-content: flex-start;">
+        <span><svg class="check" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7.5l3 3 7-7"/></svg> 14-day free trial</span>
+        <span class="sep"></span>
+        <span>Squeegee import built in</span>
+        <span class="sep"></span>
+        <span>UK-based</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Recurring rounds</span>
+        <h2>Your rounds run themselves.</h2>
+        <p class="lede">Set a client's frequency once. Servogo books every subsequent visit the moment the previous one closes. No chasing the calendar, no missed cleans.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Weekly, fortnightly, monthly, or custom.</strong> Whatever frequency you've agreed with the client, Servogo maintains it without you touching it again.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Cancel or reschedule from the day view.</strong> A customer calls to move a clean? Reschedule in two clicks. The recurring plan resumes from the new date.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Migrate from Squeegee in an evening.</strong> Drop your Squeegee CSV export into Servogo's import dialog. Column names are recognised automatically, clients, services, and pricing land exactly as they were.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / schedule</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-schedule.png" alt="Servogo schedule view showing recurring window cleaning rounds" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep reverse">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Route planning</span>
+        <h2>Plan the day's route in one click.</h2>
+        <p class="lede">Every stop on a map. Hit optimise and Servogo finds the shortest path between them. Drag a stop to move it, arrival times update as you go.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Home-start and home-return.</strong> Set your depot or home address once. Route optimisation uses it as the anchor, so your cleaners start and finish in the right place.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Weather for the day.</strong> Hourly forecast alongside the stop list. Useful when you're deciding whether to run a round or reschedule ahead of heavy rain.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Tech app for the cleaners.</strong> Your team see their own route on their phone, tap to open maps for navigation, and mark each clean complete. Works offline too.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / day-view</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-day-view.png" alt="Servogo day view showing optimised window cleaning route" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Invoicing</span>
+        <h2>Invoice after every clean. Get paid by card.</h2>
+        <p class="lede">Each completed clean generates a draft invoice. Send it by email with a Stripe payment link. Your customer pays online, it marks itself paid. No chasing, no reconciliation.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Per visit or monthly batch.</strong> Invoice after each clean for residential clients, or roll everything into a monthly invoice for commercial accounts.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Your branding on every PDF.</strong> Logo, your business colour, your invoice number prefix. Clients see your business, not generic software.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>VAT-inclusive or exclusive.</strong> Set your VAT rate once. Servogo applies it to every invoice, with totals displayed the way your clients expect.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / invoices</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-invoices.png" alt="Servogo invoices for window cleaning business" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Window cleaning software, answered.</h2>
+    </div>
+    <FAQ items={faqs} />
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" style="font-size: clamp(18px, 2vw, 22px); color: var(--text-muted); font-weight: 500; letter-spacing: 0;">
+        See how Servogo compares
+      </h2>
+    </div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="/vs-squeegee" class="btn btn-secondary">Servogo vs Squeegee</a>
+      <a href="/vs-jobber" class="btn btn-secondary">Servogo vs Jobber</a>
+      <a href="/squeegee-alternative" class="btn btn-secondary">Looking for a Squeegee alternative?</a>
+    </div>
+  </div>
+</section>
+
+</Base>

@@ -1,0 +1,162 @@
+---
+import Base from '../layouts/Base.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: "Is Servogo cheaper than Jobber for a UK business?",
+    a: "For most UK sole traders and small teams, yes. Servogo's Sole Trader plan is £25/month, or £20 on annual billing. Jobber is priced in USD and its entry plan is higher. At 2-10 users, Servogo is £22/user/month. Compare at your team size to see the difference.",
+  },
+  {
+    q: "Can I import my existing client list into Servogo?",
+    a: "Yes. Bulk CSV import with auto field-mapping works for most tools. Squeegee exports are recognised by column name automatically. For other tools, upload the CSV and Servogo maps the columns. Email us during the trial if you want a hand.",
+  },
+  {
+    q: "What does Servogo have that Jobber doesn't?",
+    a: "A weather panel on the day view, drag-drop stop reordering with live arrival time recalculation, a Squeegee CSV import that needs no remapping, and UK-native GBP pricing. It's also built specifically for recurring-service trades rather than all field service categories.",
+  },
+  {
+    q: "What does Jobber have that Servogo doesn't?",
+    a: "Two-way accounting sync with Xero and QuickBooks, marketing tools, customer review requests, and a larger feature set for businesses scaling beyond 25 users. If those are critical to your workflow, Jobber is worth comparing seriously.",
+  },
+  {
+    q: "Is there a free trial?",
+    a: "Yes. 14 days, no card required. Full Team plan during the trial. Import your client list, set up a few routes, and see how it fits before you decide.",
+  },
+];
+---
+
+<Base
+  title="Jobber Alternative UK | Servogo — Field Service Software"
+  description="Looking for a Jobber alternative in the UK? Servogo is field service software built for UK recurring-service trades. GBP pricing, Squeegee import, and a 14-day free trial."
+  pageType="comparison"
+  breadcrumbs={[{ name: 'Jobber alternative UK', url: '/jobber-alternative-uk' }]}
+>
+
+<section class="page-hero section-tight">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="section-eyebrow">Jobber alternative</span>
+      <h1>A Jobber alternative built specifically for UK recurring-service trades</h1>
+      <p>
+        Servogo does scheduling, routing, and invoicing for window cleaners, gardeners, cleaners,
+        pest control, and pool service businesses. UK pricing, UK support, built for how your business runs.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary btn-lg">
+          Start free trial
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h8M8 3l4 4-4 4"/></svg>
+        </a>
+        <a href="/vs-jobber" class="btn btn-secondary btn-lg">Full comparison</a>
+      </div>
+      <div class="hero-meta" style="justify-content: flex-start;">
+        <span><svg class="check" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7.5l3 3 7-7"/></svg> £25/month sole trader, £22/user team</span>
+        <span class="sep"></span>
+        <span>14-day free trial</span>
+        <span class="sep"></span>
+        <span>No card required</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Why switch</span>
+      <h2 class="section-title">What you get by switching from Jobber.</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Priced for UK trades</h3>
+        <p>GBP pricing, not USD converted. £25/month sole trader, £22/user for teams of 2 to 10. Cheaper as you grow beyond 10.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+        </div>
+        <h3>Built for recurring rounds</h3>
+        <p>Recurring service plans that auto-book, drag-drop reordering with live arrival times, and a Squeegee import that needs no remapping.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5a3 3 0 1 0 6 0 3 3 0 1 0-6 0z"/><path d="M12 2C7.5 2 4 5.5 4 10c0 6 8 12 8 12s8-6 8-12c0-4.5-3.5-8-8-8z"/></svg>
+        </div>
+        <h3>Focused, not sprawling</h3>
+        <p>Scheduling, routing, invoicing, and team management. No features you'll never use, no monthly tier upgrades to access the basics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="deep">
+      <div class="deep-copy reveal">
+        <span class="section-eyebrow">Who it's for</span>
+        <h2>Built for the trades Jobber wasn't designed around.</h2>
+        <p class="lede">Jobber covers a wide range of field service businesses. Servogo is narrower by design. It's built for recurring-service trades: window cleaning, gardening, cleaning, pest control, pool service. If that's your business, the fit is tighter.</p>
+        <ul class="deep-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Recurring plans as the default, not an add-on.</strong> The whole scheduling model is built around regular visits, not one-off jobs that happen to repeat.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>UK postcode geocoding out of the box.</strong> Postcodes.io integration means addresses resolve correctly across England, Scotland, and Wales without manual mapping.</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
+            <span><strong>Squeegee migration built in.</strong> If you're moving from Squeegee, your client list imports without any column remapping. It's been tested against real Squeegee exports.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="deep-shot reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url">app.servogo.co.uk / day-view</div>
+          <div style="width: 50px;"></div>
+        </div>
+        <img src="/assets/screen-day-view.png" alt="Servogo day view as Jobber alternative for UK trades" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Jobber alternative, answered.</h2>
+    </div>
+    <FAQ items={faqs} />
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" style="font-size: clamp(18px, 2vw, 22px); color: var(--text-muted); font-weight: 500; letter-spacing: 0;">
+        Related
+      </h2>
+    </div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="/vs-jobber" class="btn btn-secondary">Servogo vs Jobber — full comparison</a>
+      <a href="/window-cleaning-software" class="btn btn-secondary">Window cleaning software</a>
+      <a href="/gardening-business-software" class="btn btn-secondary">Gardening business software</a>
+    </div>
+  </div>
+</section>
+
+</Base>
