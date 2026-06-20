@@ -30,6 +30,26 @@ Set the project root to this directory. No framework preset, no build command, o
 - Set the start command to `npx serve -s . -l 8080`
 - Or use the static-site template
 
+## Claim gate (do not skip)
+
+Every marketing claim that maps to a product capability is tagged in the `.astro`
+source with `data-claim="<key>"` (space-separate multiple keys). On every build,
+`scripts/check-claims.mjs` runs (wired as the npm `prebuild` hook) and verifies
+each key exists in the app's shipped-feature manifest. If a feature is removed
+from the app, the next marketing deploy fails here until the page copy is fixed.
+
+- **Source of truth:** `frontend/public/marketing-manifest.json` in the main app
+  repo, served live at `https://app.servogo.co.uk/marketing-manifest.json`. The
+  gate fetches that URL (authoritative on CI/Vercel).
+- **Offline fallback:** a synced copy lives at `./marketing-manifest.json` here.
+  When you change the app manifest, copy it across in the same change:
+  `cp ../servogo/frontend/public/marketing-manifest.json ./marketing-manifest.json`
+- **Run manually:** `npm run check:claims`
+- **Override the URL:** set `MARKETING_MANIFEST_URL`.
+
+When you add a new factual claim to a page, tag it with the matching key(s) from
+the manifest (and add the key to the manifest first if the feature is new).
+
 ## Domain
 
 - Marketing site: `servogo.co.uk` (root)

@@ -1,6 +1,6 @@
 ---
 title: "Recurring job scheduling for small service businesses: what actually works"
-description: "How to set up recurring job schedules that hold together as your client list grows — without a spreadsheet that needs constant maintenance."
+description: "How to set up recurring job schedules that hold together as your client list grows, without a spreadsheet that needs constant maintenance."
 pubDate: 2026-05-01
 tag: "Scheduling"
 relatedPages:
@@ -18,7 +18,7 @@ Here's how recurring job scheduling works at each stage, and when to formalise i
 
 ## What recurring scheduling actually means
 
-A recurring job is a client you visit on a regular frequency — weekly, fortnightly, monthly, every six weeks, specific days of specific weeks. The job repeats on a schedule. Your system needs to know when the next visit is, who it's assigned to, and what to do when the last one closes.
+A recurring job is a client you visit on a regular frequency: weekly, fortnightly, monthly, every six weeks, or specific days of specific weeks. The job repeats on a schedule. Your system needs to know when the next visit is, who it's assigned to, and what to do when the last one closes.
 
 That sounds simple. The complexity comes from:
 

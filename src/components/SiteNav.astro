@@ -1,0 +1,36 @@
+---
+// Top navigation bar. The sticky-border-on-scroll behaviour ships with it.
+---
+<div class="nav-wrap" id="navWrap">
+  <div class="container">
+    <nav class="nav">
+      <a href="/" class="nav-logo" aria-label="Servogo home">
+        <img src="/assets/servogo-wordmark.svg" alt="Servogo" />
+      </a>
+      <div class="nav-links">
+        <a href="/#features" class="nav-link">Features</a>
+        <a href="/pricing" class="nav-link">Pricing</a>
+        <a href="/blog" class="nav-link">Blog</a>
+        <a href="/#faq" class="nav-link">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <a href="https://app.servogo.co.uk" class="btn btn-ghost btn-sm">Sign in</a>
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary btn-sm">Start free</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<script>
+  // Sticky-nav border on scroll
+  (function () {
+    var nav = document.getElementById('navWrap');
+    if (!nav) return;
+    var onScroll = function () {
+      if (window.scrollY > 8) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>

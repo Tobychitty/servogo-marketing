@@ -3,9 +3,9 @@
   "configurations": [
     {
       "name": "marketing",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "5190"],
-      "port": 5190
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "preview"],
+      "port": 4321
     }
   ]
 }

@@ -1,6 +1,6 @@
 ---
 title: "How to invoice clients faster as a tradesperson (and actually get paid)"
-description: "The gap between finishing a job and getting paid is mostly admin. Here's how to close it — without chasing every invoice by hand."
+description: "The gap between finishing a job and getting paid is mostly admin. Here's how to close it without chasing every invoice by hand."
 pubDate: 2026-04-25
 tag: "Invoicing"
 relatedPages:
@@ -10,7 +10,7 @@ relatedPages:
     url: "/window-cleaning-software"
 ---
 
-Most tradespeople are good at the work. The invoicing is where the money leaks out. Not through bad intentions — through friction. The job finishes, you mean to invoice that evening, something else comes up, and three weeks later you're chasing a client who's half-forgotten the work was done.
+Most tradespeople are good at the work. The invoicing is where the money leaks out. Not through bad intentions, through friction. The job finishes, you mean to invoice that evening, something else comes up, and three weeks later you're chasing a client who's half-forgotten the work was done.
 
 The fix isn't willpower. It's removing the steps between finishing a job and the client receiving an invoice.
 
@@ -18,7 +18,7 @@ The fix isn't willpower. It's removing the steps between finishing a job and the
 
 The delay usually comes from one of three places:
 
-**Information isn't where you need it when you need it.** You finish a job and realise the invoice details — what you charged, any extra work agreed on the day — are in a text conversation from two weeks ago. Now you have to dig for it.
+**Information isn't where you need it when you need it.** You finish a job and realise the invoice details (what you charged, any extra work agreed on the day) are in a text conversation from two weeks ago. Now you have to dig for it.
 
 **The invoicing tool is separate from the scheduling tool.** You're marking jobs done in one place and creating invoices in another. That gap is where the delay lives. Two separate steps means two separate moments where it can fall through.
 
@@ -59,7 +59,7 @@ Most invoicing tools support both. The right cadence depends on the client and t
 
 ## What to do about overdue invoices
 
-If an invoice is overdue, the first step is a gentle reminder by email. Most clients don't avoid paying — they forget, or the invoice got buried.
+If an invoice is overdue, the first step is a gentle reminder by email. Most clients don't avoid paying. They forget, or the invoice got buried.
 
 The practical process:
 

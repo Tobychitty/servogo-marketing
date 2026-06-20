@@ -12,7 +12,7 @@ relatedPages:
 
 ## Card payment failed
 
-Update your payment method in Settings → Billing. Once the new card is saved, we retry immediately — you don't need to wait for the next automatic retry.
+Update your payment method in Settings → Billing. Once the new card is saved, we retry immediately, so you don't need to wait for the next automatic retry.
 
 ## Account is read-only
 
@@ -24,7 +24,7 @@ Cancellation takes effect at the end of your current billing period, not immedia
 
 ## I want to pause my subscription
 
-There's no manual pause — accounts only enter the paused state after a failed payment. If you want to stop paying but keep your data, cancel and your account stays accessible (read-only) for 30 days. Export your client list and invoice history before then.
+There's no manual pause option. Accounts only enter the paused state after a failed payment. If you want to stop paying but keep your data, cancel and your account stays accessible (read-only) for 30 days. Export your client list and invoice history before then.
 
 ## How do I get a refund?
 

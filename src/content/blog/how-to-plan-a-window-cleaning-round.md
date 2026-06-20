@@ -10,7 +10,7 @@ relatedPages:
     url: "/vs-squeegee"
 ---
 
-A badly ordered round costs you money every day. Not in any obvious way — the work still gets done, the customers still get cleaned — but in dead time between stops. A round that runs east to west, then backtracks north, then cuts across the middle again can add 45 minutes of windscreen time to a day that already starts at 7am.
+A badly ordered round costs you money every day. Not in any obvious way: the work still gets done, the customers still get cleaned, but in dead time between stops. A round that runs east to west, then backtracks north, then cuts across the middle again can add 45 minutes of windscreen time to a day that already starts at 7am.
 
 Here's how to think about round planning properly.
 
@@ -34,9 +34,9 @@ Get rough times for each stop and factor them into your day view. Knowing that s
 
 ## The weather question
 
-UK window cleaning is weather-dependent in a way that other trades aren't. Rain the night before isn't necessarily a problem — clean windows after rain is a legitimate selling point for some customers. Heavy rain while you're cleaning is another matter.
+UK window cleaning is weather-dependent in a way that other trades aren't. Rain the night before isn't necessarily a problem (clean windows after rain is a legitimate selling point for some customers). Heavy rain while you're cleaning is another matter.
 
-The practical move is to check the forecast the evening before and think about which clients you'd reschedule if the weather turns. Having a mental priority list — the regular Monday residential clients you'd defer, versus the monthly commercial contract you'd push through regardless — saves a scramble on the day.
+The practical move is to check the forecast the evening before and think about which clients you'd reschedule if the weather turns. Having a mental priority list (the regular Monday residential clients you'd defer, versus the monthly commercial contract you'd push through regardless) saves a scramble on the day.
 
 ## Use software to do the maths
 

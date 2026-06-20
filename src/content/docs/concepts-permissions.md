@@ -19,7 +19,7 @@ A reference of what each role can do. Every action in the app falls into one of 
 | Manage clients | Yes | Yes | Yes | No |
 | Send messages | Yes | Yes | Yes | Limited |
 | Create and send invoices | Yes | Yes | No | No |
-| View Payroll (all) | Yes | Yes | No | Own only |
+| View Payroll | Yes | Yes | No | No |
 | Manage Personnel | Yes | Yes | No | No |
 | Org settings | Yes | Yes | No | No |
 | Billing | Yes | No | No | No |

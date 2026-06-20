@@ -9,11 +9,11 @@ const faqs = [
   },
   {
     q: "Can I manage multiple gardeners on different jobs each day?",
-    a: "Yes. Each gardener has their own route, their own login, and sees only their own jobs in the tech app. You see all routes from the main account. Per-tech working days let you set which days each person is available, and the schedule respects it.",
+    a: "Yes. Each gardener has their own route, their own login, and sees only their own jobs in the tech view. You see all routes from the main account. Assign each day's jobs to whichever gardener is on shift.",
   },
   {
     q: "How does invoicing work for a gardening business?",
-    a: "Each completed visit generates a draft invoice. You can send one per visit, or roll multiple visits into a monthly invoice per client — useful for regular maintenance contracts. Invoices go by email with a Stripe payment link. Customers pay online, it marks itself paid.",
+    a: "Each completed visit generates a draft invoice. You can send one per visit, or roll multiple visits into a monthly invoice per client, useful for regular maintenance contracts. Invoices go by email with a Stripe payment link. Customers pay online, it marks itself paid.",
   },
   {
     q: "Can clients accept a quote before I schedule the work?",
@@ -24,8 +24,8 @@ const faqs = [
     a: "Yes. Bulk CSV import with auto field-mapping works for exports from most other tools. Drop in the file and Servogo maps the columns. Email us during the trial if you want a hand.",
   },
   {
-    q: "Does the tech app work without mobile signal?",
-    a: "The app loads and caches the day's route when it opens. Your gardeners can mark jobs complete, add notes, and take photos in areas without signal. Everything syncs when they're back on data.",
+    q: "How do my gardeners use Servogo in the field?",
+    a: "Each gardener gets their own login. They open Servogo on their phone, see only their route for the day, tap a stop to open it in their maps app for directions, and mark each job complete as they go. Internet connection required.",
   },
 ];
 ---
@@ -83,7 +83,7 @@ const faqs = [
           </li>
           <li>
             <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
-            <span><strong>Full visit history per client.</strong> Every completed job is logged with date, notes, and photos. Useful when a client queries when you last visited or what work was done.</span>
+            <span><strong>Full visit history per client.</strong> Every completed job is logged with date and notes. Useful when a client queries when you last visited or what work was done.</span>
           </li>
         </ul>
       </div>

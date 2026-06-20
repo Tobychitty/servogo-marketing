@@ -16,7 +16,7 @@ Yes. Every new account gets a 14-day free trial with no card required. At the en
 
 ## What does it cost after the trial?
 
-Pricing is on [servogo.co.uk/pricing](/pricing). It's a flat monthly fee per seat — no per-job or per-invoice charges.
+Pricing is on [servogo.co.uk/pricing](/pricing). It's a flat monthly fee per seat, with no per-job or per-invoice charges.
 
 ## Can I import my existing client list?
 
@@ -24,7 +24,7 @@ Yes. Servogo accepts CSV files. If you're coming from Squeegee, we recognise Squ
 
 ## Does it work on mobile?
 
-The app is a responsive web app — it works in any mobile browser, no app store download needed. Techs can mark jobs complete, add notes, and view their route from their phone.
+The app is a responsive web app. It works in any mobile browser, no app store download needed. Techs can mark jobs complete, add notes, and view their route from their phone.
 
 ## Can my techs see everything?
 

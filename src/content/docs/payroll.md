@@ -1,6 +1,6 @@
 ---
 title: "Payroll"
-description: "How Servogo calculates tech earnings from completed visits and how to close a pay period."
+description: "How Servogo calculates tech earnings from completed visits and how to review and export a pay period."
 section: "Daily workflows"
 order: 14
 ---
@@ -11,8 +11,10 @@ Payroll shows what each tech has earned over a chosen period, based on completed
 
 Each tech has a pay rule on their personnel profile: a percentage of the visit price, a flat per-visit amount, or an hourly rate. The Payroll view sums these across the period.
 
-## Period close
+## Reviewing a period
 
-Pick the period (weekly, fortnightly, monthly), review each tech's line, and click **Mark paid** when you've actually paid them. Marked-paid periods are locked so the figures don't shift if you back-edit a visit.
+Pick a period using the presets (this month, last month, this quarter, year to date) or set a custom date range. Each tech's line shows jobs completed, revenue, and calculated earnings. Export the table to CSV when you want to pay your team or hand figures to your accountant.
 
-> Payroll is read-only for techs - they see their own earnings but nothing about other techs.
+Payroll figures are calculated live from completed visits, so if you back-edit a visit the totals for that period update to match. Export the CSV at the point you pay, so you have a record of the figures you actually used.
+
+> Payroll is visible to owners and managers only. Dispatchers and techs cannot see it.
