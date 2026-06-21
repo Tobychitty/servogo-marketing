@@ -5,7 +5,7 @@ section: "Daily workflows"
 order: 6
 ---
 
-The Dashboard is where owners and managers get a snapshot of the business. It is the default landing page for admin roles.
+The Dashboard is where admins get a snapshot of the business. It is the default landing page for admins.
 
 ## What you see
 

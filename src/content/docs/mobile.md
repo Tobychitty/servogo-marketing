@@ -1,6 +1,6 @@
 ---
 title: "Mobile workflow for techs"
-description: "How field technicians use Servogo's mobile app to view routes, navigate to stops, and mark jobs complete."
+description: "How field technicians use Servogo from their phone browser to view routes, navigate to stops, and mark jobs complete."
 section: "Daily workflows"
 order: 15
 relatedPages:
@@ -10,22 +10,21 @@ relatedPages:
     url: "/docs/day-view"
 ---
 
-Servogo's mobile experience is designed for techs working in the field. Anyone can use it from a phone browser; there is also a dedicated staff app.
+Servogo's mobile experience is designed for techs working in the field. It runs in any phone browser, with no app to install.
 
 ## What a tech sees
 
 - Today's route, in order, with the next stop highlighted.
 - Each stop's address, contact, access notes, and service to perform.
 - One-tap navigation handoff to Apple Maps or Google Maps.
-- A **Mark complete** button per stop, with optional photo and notes.
-- Their own messages with the office.
+- A **Mark complete** button per stop, with an optional completion note.
 
 ## What a tech cannot see
 
 - Other techs' routes.
 - Clients they aren't visiting.
-- Any pricing, invoices, or financials beyond their own pay summary.
+- Any pricing, invoices, payroll, or financials.
 
-## Offline
+## Connection
 
-The mobile view loads the day's route once and keeps it locally, so brief signal drops don't break the workflow. Marked-complete actions sync as soon as signal returns.
+The tech view runs in the browser and needs an internet connection to load the day's route and to sync completed visits. It is not an offline app.

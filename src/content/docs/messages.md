@@ -1,22 +1,18 @@
 ---
-title: "Messages"
-description: "How to send messages to clients in Servogo, use templates, and bulk message multiple clients at once."
+title: "Client messages"
+description: "How Servogo keeps a record of the automated notifications sent to each client, and what's coming next."
 section: "Daily workflows"
 order: 12
 ---
 
-Messages let you communicate with clients without leaving Servogo. Every message is logged on the client's profile.
+Servogo keeps a record of the messages sent to each client, so you always have a history of what went out and when. Every automated notification is logged on the client's profile.
 
-## Sending a message
+## Automated notifications
 
-1. Open Messages, or open a client and click **Message**.
-2. Type your message, or pick a template.
-3. Send.
+Servogo sends automated emails to clients at the right moments: visit reminders, route updates, invoice sent, and payment received. You control which ones go out and edit their wording in Settings → Notifications. See [Notification settings](/docs/settings-notifications).
 
-## Templates
+## The per-client log
 
-Settings → Notifications has the templates Servogo uses for automated messages (visit reminders, invoice sent, etc.). You can edit the wording to match your brand voice.
+Open any client to see the history of notifications sent to them. This gives you a paper trail without leaving the app.
 
-## Bulk messaging
-
-From the Clients view, select multiple clients and choose **Message selected**. Useful for weather-related announcements or service updates to a group of clients.
+> Direct two-way conversations with clients (replying to messages, bulk sending) are coming soon, alongside the customer portal. This page will be updated when they ship.

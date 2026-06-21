@@ -17,4 +17,4 @@ Pick a period using the presets (this month, last month, this quarter, year to d
 
 Payroll figures are calculated live from completed visits, so if you back-edit a visit the totals for that period update to match. Export the CSV at the point you pay, so you have a record of the figures you actually used.
 
-> Payroll is visible to owners and managers only. Dispatchers and techs cannot see it.
+> Payroll is visible to admins only. Standard team members cannot see it.

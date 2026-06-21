@@ -28,7 +28,7 @@ The app is a responsive web app. It works in any mobile browser, no app store do
 
 ## Can my techs see everything?
 
-No. Techs only see their own assigned jobs and route. Managers and owners can see everything. See [Roles and permissions](/docs/roles) for the full breakdown.
+No. Standard team members only see their own assigned jobs and route. Admins can see everything. See [Roles and permissions](/docs/roles) for the full breakdown.
 
 ## What happens to my data if I cancel?
 

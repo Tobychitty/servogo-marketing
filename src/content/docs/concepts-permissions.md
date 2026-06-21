@@ -1,6 +1,6 @@
 ---
 title: "Roles and permissions matrix"
-description: "A complete reference of what each Servogo role can do: owner, manager, dispatcher, and tech."
+description: "A complete reference of what admins and standard team members can do in Servogo."
 section: "Concepts"
 order: 25
 relatedPages:
@@ -8,18 +8,19 @@ relatedPages:
     url: "/docs/roles"
 ---
 
-A reference of what each role can do. Every action in the app falls into one of these buckets.
+Servogo has two access levels: **Admin** and **Standard**. Here's what each can do.
 
-| Action | Owner | Manager | Dispatcher | Tech |
-|--------|-------|---------|-----------|------|
-| View own routes and jobs | Yes | Yes | Yes | Yes |
-| Mark visits complete | Yes | Yes | Yes | Yes |
-| View all routes and techs | Yes | Yes | Yes | No |
-| Edit schedule | Yes | Yes | Yes | No |
-| Manage clients | Yes | Yes | Yes | No |
-| Send messages | Yes | Yes | Yes | Limited |
-| Create and send invoices | Yes | Yes | No | No |
-| View Payroll | Yes | Yes | No | No |
-| Manage Personnel | Yes | Yes | No | No |
-| Org settings | Yes | Yes | No | No |
-| Billing | Yes | No | No | No |
+| Action | Admin | Standard |
+|--------|-------|----------|
+| See your own day and route | Yes | Yes |
+| Mark your visits complete | Yes | Yes |
+| See clients and job history | Everyone's | Their own |
+| See the whole schedule and all routes | Yes | No |
+| Manage schedule, services, and quotes | Yes | No |
+| Create and send invoices | Yes | No |
+| View payroll | Yes | No |
+| Manage personnel | Yes | No |
+| Organisation settings | Yes | No |
+| Billing | Yes | No |
+
+> The person who signs up is the **owner** - an admin who can't be removed. Everyone else you add is either an admin or a standard team member.
