@@ -40,7 +40,7 @@ function formatDate(d: Date) {
       </nav>
 
       {post.data.tag && <span class="section-eyebrow">{post.data.tag}</span>}
-      <h1 style="font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 600; margin: 12px 0 16px; color: var(--ink); text-wrap: balance;">{post.data.title}</h1>
+      <h1 style="font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 600; margin: 12px 0 16px; color: var(--ink); text-wrap: balance;">{post.data.heading ?? post.data.title}</h1>
       <p style="font-size: 15px; color: var(--text-tertiary); margin: 0 0 48px;">{formatDate(post.data.pubDate)}</p>
 
       <article class="prose">

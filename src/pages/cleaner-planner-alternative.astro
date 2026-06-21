@@ -1,0 +1,141 @@
+---
+import Base from '../layouts/Base.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    q: "Is Servogo made for window cleaners?",
+    a: "Yes. Recurring rounds, route order and round-based invoicing are built for exactly this kind of work, alongside other recurring-visit trades.",
+  },
+  {
+    q: "Can I import my existing clients?",
+    a: "Yes, by CSV. Your names, addresses, prices and visit frequencies come across in one import.",
+  },
+  {
+    q: "Do customers pay by card?",
+    a: "Yes, through Stripe. An invoice can be paid online without a bank transfer.",
+  },
+  {
+    q: "Is there a free trial?",
+    a: "Yes, a free trial with no card required, and no long contract after.",
+  },
+];
+---
+
+<Base
+  title="Cleaner Planner Alternative | Servogo for Window Cleaners"
+  description="A Cleaner Planner alternative for UK window cleaners. Plan recurring rounds, optimise routes, send invoices and take card payments. Free trial, no contract."
+  pageType="comparison"
+  breadcrumbs={[{ name: 'Cleaner Planner alternative', url: '/cleaner-planner-alternative' }]}
+>
+
+<section class="page-hero section-tight">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="section-eyebrow">Cleaner Planner alternative</span>
+      <h1>A Cleaner Planner alternative built for the round and the office</h1>
+      <p>
+        Cleaner Planner has run a lot of window cleaning rounds for a long time. If it still does everything you need, there is no reason to move.
+        People tend to look for an alternative when they want the round and the money side in one place, with card payments built in and an app that feels current on a phone in the van.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://app.servogo.co.uk/signup" class="btn btn-primary btn-lg">
+          Start free trial
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h8M8 3l4 4-4 4"/></svg>
+        </a>
+        <a href="/window-cleaning-software" class="btn btn-secondary btn-lg">Window cleaning software</a>
+      </div>
+      <div class="hero-meta" style="justify-content: flex-start;">
+        <span><svg class="check" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7.5l3 3 7-7"/></svg> CSV import built in</span>
+        <span class="sep"></span>
+        <span>Free trial, no card required</span>
+        <span class="sep"></span>
+        <span>No long contract</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">What you get</span>
+      <h2 class="section-title">What Servogo gives a window cleaner</h2>
+    </div>
+    <div class="prose" style="max-width: 720px;">
+      <ul>
+        <li><strong>Recurring rounds that schedule themselves.</strong> Set a job to repeat on a cycle and it comes back round on its own. No re-entering the same visit every month.</li>
+        <li><strong>A route, not just a list.</strong> Open the day and your stops are put in driving order, so you are not crossing town twice.</li>
+        <li><strong>Invoices the moment a job is done.</strong> Mark it complete and the invoice is ready. Customers pay by card through Stripe.</li>
+        <li><strong>The team side handled.</strong> See who did what and what they are owed, without adding up paper worksheets.</li>
+        <li><strong>One place for it all.</strong> Clients, visits, invoices and payments sit together instead of across a notebook, a spreadsheet and your memory.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Is it for you?</span>
+      <h2 class="section-title">Who moves, and who should stay put</h2>
+    </div>
+    <div class="prose" style="max-width: 720px;">
+      <h3>Who tends to move</h3>
+      <p>Sole traders who want to look professional without a Sunday of admin. Cleaners taking on a second van who suddenly need to know who did which jobs. Anyone who wants customers to pay by card instead of waiting on a bank transfer.</p>
+      <h3>Who should stay put</h3>
+      <p>If your current setup works and you do not need card payments or a team view, you do not need to switch. We would rather tell you that than sell you something you will not use.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Migration</span>
+      <h2 class="section-title">Moving your round across</h2>
+    </div>
+    <div class="prose" style="max-width: 720px;">
+      <p>Bring your client list in by CSV. Addresses, prices and frequencies come with it, so your round is set up the same day rather than typed in client by client.</p>
+    </div>
+    <div style="margin-top: 32px;">
+      <a href="https://app.servogo.co.uk/signup" class="btn btn-primary">Start free</a>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Cleaner Planner alternative, answered.</h2>
+    </div>
+    <FAQ items={faqs} />
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" style="font-size: clamp(18px, 2vw, 22px); color: var(--text-muted); font-weight: 500; letter-spacing: 0;">
+        Related
+      </h2>
+    </div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="/window-cleaning-software" class="btn btn-secondary">Window cleaning software</a>
+      <a href="/squeegee-alternative" class="btn btn-secondary">Squeegee alternative</a>
+    </div>
+  </div>
+</section>
+
+</Base>

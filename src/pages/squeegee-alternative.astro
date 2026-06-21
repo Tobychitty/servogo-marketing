@@ -19,12 +19,28 @@ const faqs = [
     q: "Is there a free trial?",
     a: "Yes. 14 days, no card required. You get the full Team plan during the trial. Import your Squeegee data, run the schedule for a week, and decide from there.",
   },
+  {
+    q: "Will I lose my round history when I switch?",
+    a: "Your client list, prices and visit frequencies import from a Squeegee CSV. You keep the round you have built and start fresh records from the day you move.",
+  },
+  {
+    q: "Do I need to remap the columns when I import?",
+    a: "No. Servogo reads a standard Squeegee export, so the import recognises the columns without you matching fields one by one.",
+  },
+  {
+    q: "Can my customers pay by card?",
+    a: "Yes. Servogo connects to Stripe, so an invoice can be paid online in a couple of taps.",
+  },
+  {
+    q: "Is there a contract?",
+    a: "No long contract. There is a free trial, and you pay monthly after that.",
+  },
 ];
 ---
 
 <Base
   title="Squeegee Alternative | Servogo: UK Field Service Software"
-  description="Looking for a Squeegee alternative? Servogo is UK field service software for window cleaners and trades, with Stripe payments, payroll tracking, and a Squeegee CSV import that needs no remapping."
+  description="A Squeegee alternative for UK window cleaners and trades. Import your Squeegee CSV, plan rounds, take Stripe payments and run payroll. Free trial."
   pageType="comparison"
   breadcrumbs={[{ name: 'Squeegee alternative', url: '/squeegee-alternative' }]}
 >
@@ -52,6 +68,22 @@ const faqs = [
         <span class="sep"></span>
         <span>No card required</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Switching</span>
+      <h2 class="section-title">Moving across from Squeegee</h2>
+    </div>
+    <div class="prose" style="max-width: 720px;">
+      <p>You do not have to rebuild your round from scratch. Export your client list from Squeegee as a CSV and import it straight into Servogo. Names, addresses, prices and visit frequencies come across in one go, so a round you have spent years building is ready the same afternoon.</p>
+      <p>Once your clients are in, Servogo works the way a round already works in your head. Set a job to repeat every 4, 6 or 8 weeks and it schedules itself. Open the day and your stops are ordered into a sensible driving route instead of a list you have to plan in your head. Mark a job done and the invoice is ready to send. Payments come in through Stripe, so customers can pay by card without you chasing a bank transfer.</p>
+      <p>The difference most people notice is the admin. Less time at the kitchen table on a Sunday working out who owes what, more evenings back. If you run a team, you can see who did which jobs and what they are owed without adding up worksheets by hand.</p>
     </div>
   </div>
 </section>
