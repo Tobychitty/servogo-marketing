@@ -1,0 +1,112 @@
+---
+// Cookie consent banner. Gates the Meta (Facebook) Pixel: the pixel is not loaded
+// until the visitor accepts. Choice is stored in localStorage so the banner only
+// shows once, and can be reopened from the footer "Cookie settings" link.
+interface Props {
+  metaPixelId: string;
+}
+const { metaPixelId } = Astro.props;
+---
+
+<div id="cookieConsent" class="cookie-consent" role="dialog" aria-live="polite"
+     aria-label="Cookie consent" hidden>
+  <div class="cookie-consent-inner">
+    <p class="cookie-consent-copy">
+      We use essential cookies to run Servogo, plus optional analytics and advertising
+      cookies to improve the product and measure our ads. You can accept or decline the
+      optional ones. See our <a href="/privacy">Privacy Policy</a>.
+    </p>
+    <div class="cookie-consent-actions">
+      <button type="button" id="cookieDecline" class="btn btn-ghost btn-sm">Decline</button>
+      <button type="button" id="cookieAccept" class="btn btn-primary btn-sm">Accept</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cookie-consent {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 100;
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--bg);
+    border: 1px solid var(--stroke-regular);
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.14);
+    padding: 16px 18px;
+  }
+  .cookie-consent[hidden] { display: none; }
+  .cookie-consent-inner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .cookie-consent-copy {
+    margin: 0;
+    flex: 1 1 320px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+  .cookie-consent-copy a { color: var(--accent); }
+  .cookie-consent-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+</style>
+
+<script is:inline define:vars={{ metaPixelId }}>
+  (function () {
+    var KEY = 'servogo.cookie_consent';
+
+    function loadMetaPixel() {
+      if (!metaPixelId || window.fbq) return;
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
+        t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      window.fbq('init', metaPixelId);
+      window.fbq('track', 'PageView');
+    }
+
+    var banner = document.getElementById('cookieConsent');
+
+    function showBanner() { if (banner) banner.hidden = false; }
+    function hideBanner() { if (banner) banner.hidden = true; }
+
+    function setChoice(choice) {
+      try { localStorage.setItem(KEY, choice); } catch (e) {}
+      hideBanner();
+      if (choice === 'accepted') loadMetaPixel();
+    }
+
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+
+    if (stored === 'accepted') {
+      loadMetaPixel();
+    } else if (stored !== 'declined') {
+      showBanner();
+    }
+
+    var acceptBtn = document.getElementById('cookieAccept');
+    var declineBtn = document.getElementById('cookieDecline');
+    if (acceptBtn) acceptBtn.addEventListener('click', function () { setChoice('accepted'); });
+    if (declineBtn) declineBtn.addEventListener('click', function () { setChoice('declined'); });
+
+    // Let the footer reopen the banner so visitors can change their choice.
+    window.servogoOpenCookieSettings = function () { showBanner(); };
+  })();
+</script>

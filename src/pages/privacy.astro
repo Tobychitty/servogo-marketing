@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const LAST_UPDATED = '25 April 2026';
+const LAST_UPDATED = '21 June 2026';
 const COMPANY_NAME = 'Servogo';
 const COMPANY_LEGAL = 'Tobsoft Ltd';
 const COMPANY_NUMBER = '17180232';
@@ -53,7 +53,7 @@ const COMPANY_EMAIL = 'support@servogo.co.uk';
           <ul>
             <li>Jobs, routes, service plans, and invoices you create in the Service.</li>
             <li>Audit log entries recording key actions (login, billing events, role changes).</li>
-            <li>Messages sent between staff and clients within the platform.</li>
+            <li>Automated notifications sent to your clients (visit reminders, invoice and payment emails), logged on the client record.</li>
           </ul>
           <h3>2.3 Technical data</h3>
           <ul>
@@ -90,11 +90,13 @@ const COMPANY_EMAIL = 'support@servogo.co.uk';
           <ul>
             <li><strong>Stripe, Inc.</strong> - Payment processing. Stripe acts as an independent data controller for card data.</li>
             <li><strong>Resend</strong> - Transactional email delivery.</li>
-            <li><strong>PostHog (EU)</strong> - Product analytics and session recording. PostHog records page views, feature interactions, and anonymised session replays to help us improve the product. All data is processed on EU servers. Inputs are masked in recordings; no sensitive form data is captured.</li>
+            <li><strong>PostHog (EU)</strong> - Product analytics and session recording. With your consent, PostHog records page views, feature interactions, and anonymised session replays to help us improve the product. All data is processed on EU servers. Inputs are masked in recordings; no sensitive form data is captured.</li>
+            <li><strong>Meta Platforms, Inc.</strong> - Advertising measurement. With your consent, the Meta (Facebook) Pixel records page views and trial signups on our marketing site and app so we can measure the performance of our advertising. You can decline this from the cookie banner.</li>
             <li><strong>OpenWeatherMap</strong> - Weather data for route planning (no personal data shared).</li>
+            <li><strong>Sentry</strong> - Error monitoring (IP addresses and stack traces; configured to minimise personal data).</li>
             <li><strong>Hosting provider</strong> - Cloud infrastructure, database hosting, and automated backups.</li>
           </ul>
-          <p>We do not sell your personal data. We do not share it with advertisers.</p>
+          <p>We do not sell your personal data. The only advertising-related sharing is the Meta Pixel described above, which runs only with your consent.</p>
           <p>We may disclose personal data if required by law, court order, or to protect the rights, property, or safety of {COMPANY_NAME}, our users, or others.</p>
 
           <h2>6. Data Retention</h2>
@@ -121,15 +123,23 @@ const COMPANY_EMAIL = 'support@servogo.co.uk';
           <p>You have the right to lodge a complaint with the Information Commissioner's Office (ICO): <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.</p>
 
           <h2>8. Cookies and Local Storage</h2>
-          <p>We do not use advertising cookies. The storage we use falls into two categories:</p>
+          <p>The storage we use falls into three categories. When you first visit, a cookie
+          banner asks you to accept or decline the non-essential categories. We do not set
+          analytics or advertising cookies until you accept, and you can change your choice at
+          any time from the banner.</p>
           <p><strong>Essential (no consent required under PECR Reg. 6(4)):</strong></p>
           <ul>
             <li>Authentication tokens in localStorage - necessary to keep you logged in.</li>
             <li>UI preferences (table column visibility, sidebar state) in localStorage.</li>
+            <li>Your cookie-consent choice itself.</li>
           </ul>
-          <p><strong>Analytics (PostHog):</strong></p>
+          <p><strong>Analytics (PostHog) - set only with your consent:</strong></p>
           <ul>
-            <li>PostHog sets cookies and uses localStorage to track page views, feature interactions, and session recordings across your use of the Service. This data is used solely to improve the product. You can opt out by contacting us at {COMPANY_EMAIL}.</li>
+            <li>PostHog sets cookies and uses localStorage to record page views, feature interactions, and session recordings across your use of the Service. This data is used solely to improve the product and is processed on EU servers.</li>
+          </ul>
+          <p><strong>Advertising (Meta Pixel) - set only with your consent:</strong></p>
+          <ul>
+            <li>The Meta (Facebook) Pixel sets cookies to record page views and trial signups so we can measure the performance of our advertising. If you decline, the pixel does not load.</li>
           </ul>
 
           <h2>9. Security</h2>

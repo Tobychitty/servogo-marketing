@@ -1,6 +1,19 @@
 ---
 // Footer call-to-action band plus the site footer columns.
 ---
+<style>
+  .foot-cookie-btn {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .foot-cookie-btn:hover { color: var(--ink); }
+</style>
+
 <!-- ─── Footer CTA ───────────────────────────────────────── -->
 <section class="footer-cta" id="cta">
   <div class="container footer-cta-inner">
@@ -54,11 +67,12 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; 2026 Servogo Ltd &middot; Made for trades, in the UK.</span>
+      <span>&copy; 2026 Tobsoft Ltd, trading as Servogo &middot; Made for trades, in the UK.</span>
       <span>
         <a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp;
         <a href="/terms">Terms</a> &nbsp;&middot;&nbsp;
-        <a href="mailto:support@servogo.co.uk">DPA</a>
+        <a href="/terms#data-processing">DPA</a> &nbsp;&middot;&nbsp;
+        <button type="button" class="foot-cookie-btn" onclick="window.servogoOpenCookieSettings && window.servogoOpenCookieSettings()">Cookie settings</button>
       </span>
     </div>
   </div>
