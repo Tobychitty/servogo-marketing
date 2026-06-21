@@ -18,8 +18,8 @@ Servogo is a field service management platform built for owner-run and small-to-
 - **Plans the day's route** with drag-drop ordering, optional auto-optimisation, and weather context.
 - **Tracks visits** as jobs complete, building a per-client history.
 - **Generates invoices** automatically from completed visits, sends them, and tracks payment.
-- **Sends messages** to clients (visit reminders, route updates, ad-hoc).
-- **Manages your team** with role-based access - owners, managers, dispatchers, and techs each see only what they need.
+- **Sends automated client notifications** (visit reminders, route updates, invoice sent, payment received).
+- **Manages your team** with two access levels - admins see the whole business, standard members see just their own work.
 
 ## Core concepts
 
@@ -33,4 +33,4 @@ Servogo is a field service management platform built for owner-run and small-to-
 
 ## Who this manual is for
 
-Anyone using Servogo: owners setting up the business, managers running the schedule, dispatchers organising routes, and techs out in the field.
+Anyone using Servogo: admins setting up and running the business, and standard team members out in the field. Every page tells you which access levels it applies to.

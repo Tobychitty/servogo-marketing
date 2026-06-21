@@ -18,6 +18,6 @@ Notifications controls automated messages: when they go out, what they say, and 
 
 Click any template to edit. You can use placeholders - for example `{client_name}` or `{visit_date}` - and Servogo substitutes them at send time.
 
-## Channels
+## Turning notifications on or off
 
-Each notification type can be enabled per channel: email, SMS, both, or off. SMS requires the client to have a valid mobile number.
+Each notification type can be switched on or off independently. Notifications are sent by email, so the client needs a valid email address on their profile to receive them.

@@ -1,7 +1,7 @@
 {
   "$comment": "Canonical list of SHIPPED, demonstrable features. Source of truth for marketing copy. The marketing site's build (servogo.co.uk) fetches this file and fails if any pricing-page or homepage claim references a key not listed here. When you ship or remove a feature, update this file in the same change. Keep it in sync with MARKETING_FACTS.md. Served at https://app.servogo.co.uk/marketing-manifest.json.",
   "version": 1,
-  "updated": "2026-05-25",
+  "updated": "2026-06-21",
   "features": {
     "scheduling.recurring_plans": "Recurring service plans (weekly/monthly/specific-day) that auto-generate jobs",
     "scheduling.one_off_jobs": "One-off jobs created and assigned to a tech and date",
@@ -36,12 +36,8 @@
     "clients.squeegee_compat": "Squeegee CSV column-name compatibility out of the box",
     "clients.archive_delete": "Archive (preserves history) or delete clients",
     "clients.message_log": "Per-client message log",
-    "messaging.email": "Email messages to clients, with threading",
-    "messaging.templates": "Quick reply templates",
-    "messaging.bulk_send": "Bulk send to multiple selected clients",
-    "messaging.read_tracking": "Read and unread tracking",
     "messaging.notification_templates": "Notification templates with placeholders",
-    "personnel.roles": "Four roles (owner, manager, dispatcher, tech) with scoped access",
+    "personnel.roles": "Two access levels (admin, standard) with scoped access",
     "personnel.invitations": "Email invitations with 7-day expiry, resendable",
     "personnel.home_address": "Per-tech home address override for routing",
     "personnel.pay_rules": "Per-tech pay rules: commission percent, flat per visit, or hourly",
@@ -66,7 +62,7 @@
     "integrations.stripe": "Stripe payment links and platform subscription billing",
     "integrations.openweather": "OpenWeather forecast on day view",
     "integrations.postcodes_io": "Postcodes.io UK postcode geocoding",
-    "integrations.email": "Email via SES, SendGrid, or SMTP",
+    "integrations.email": "Transactional email via Resend",
     "export.csv": "CSV export for clients, service plans, job history, invoices, payroll",
     "export.pdf": "Branded PDF for invoices and quotes"
   }

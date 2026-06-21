@@ -10,7 +10,7 @@ relatedPages:
     url: "/docs/mobile"
 ---
 
-Day View is where the day's work actually happens. It is the default landing page for dispatchers and techs, and the page most people spend most of their time on.
+Day View is where the day's work actually happens. It is the default landing page for standard team members, and the page most people spend most of their time on.
 
 ## The layout
 
