@@ -1,7 +1,7 @@
 {
   "name": "servogo-marketing",
   "version": "1.0.0",
-  "description": "Static marketing site for Servogo. Plain HTML/CSS/JS — no build step.",
+  "description": "Servogo marketing site. Astro static build, deployed on Vercel.",
   "main": "index.js",
   "scripts": {
     "dev": "astro dev",
