@@ -7,8 +7,9 @@ const rows = [
   { feature: 'Recurring service plans', servogo: true, competitor: true },
   { feature: 'Day view with live map', servogo: true, competitor: true },
   { feature: 'Route optimisation', servogo: true, competitor: true },
-  { feature: 'Drag-drop reordering with live time recalculation', servogo: true, competitor: false },
-  { feature: 'Weather on the day view', servogo: true, competitor: false },
+  { feature: 'Drag-drop reordering of the day', servogo: true, competitor: true },
+  { feature: 'Live arrival-time recalculation as you drag stops', servogo: true, competitor: 'Not advertised' },
+  { feature: 'Weather on the day view', servogo: true, competitor: true },
   { feature: 'Branded PDF invoices', servogo: true, competitor: true },
   { feature: 'Online card payments on invoices', servogo: true, competitor: true },
   { feature: 'Quotes with client acceptance', servogo: true, competitor: true },
@@ -25,7 +26,7 @@ const faqs = [
   },
   {
     q: "What does Servogo do differently from Squeegee?",
-    a: "Drag-drop stop reordering with live arrival-time recalculation, a weather panel built into the day view, payroll tracking per technician, and a CSV import that reads your Squeegee export directly. Both tools cover scheduling, invoicing, card payments, and quotes.",
+    a: "Live arrival-time recalculation when you drag a stop, payroll tracking per technician, and a CSV import that reads your Squeegee export directly. Both tools cover scheduling, drag-drop day planning, weather, invoicing, card payments, and quotes.",
   },
   {
     q: "Is Servogo more expensive than Squeegee?",
@@ -81,7 +82,7 @@ const faqs = [
         <ul class="deep-list">
           <li>
             <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
-            <span>You want a weather panel built into the day view to plan around the rain.</span>
+            <span>You want the whole business in one web app: office view on the desktop, tech view in the phone browser, nothing to install.</span>
           </li>
           <li>
             <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span>
